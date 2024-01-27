@@ -1,5 +1,8 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "paths": {
+      "@frontend/ui": ["libs/ui/src/index.ts"]
+    }
   }
 }
