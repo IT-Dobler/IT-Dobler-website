@@ -4,7 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6783cce6-3189-40bc-9b7e-d42c82bc09de" name="Other changes" comment="- Fixed deployment github action&#10;- Removed package-lock.json" />
+    <list default="true" id="6783cce6-3189-40bc-9b7e-d42c82bc09de" name="Other changes" comment=".gitignore for .idea files">
+      <change afterPath="$PROJECT_DIR$/frontend/src/assets/images/dark-mode/card-border-gold.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/assets/images/dark-mode/card-border-light-gold.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/assets/images/dark-mode/list-point-light-gold.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/assets/images/dark-mode/logo-de.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/assets/images/dark-mode/logo-en.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/assets/images/dark-mode/logo-es.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/assets/images/dark-mode/logo-landing-page-de.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/assets/images/dark-mode/logo-landing-page-en.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/assets/images/dark-mode/logo-landing-page-es.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/assets/images/light-mode/card-border-gold.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/assets/images/light-mode/card-border-light-gold.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/assets/images/light-mode/list-point-white.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/assets/images/light-mode/logo-de.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/assets/images/light-mode/logo-en.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/assets/images/light-mode/logo-es.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/assets/images/light-mode/logo-landing-page-de.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/assets/images/light-mode/logo-landing-page-en.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/assets/images/light-mode/logo-landing-page-es.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/assets/images/list-point-gold.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/assets/images/logo-plain.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IT-Dobler-website.iml" beforeDir="false" afterPath="$PROJECT_DIR$/IT-Dobler-website.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/libs/home/src/lib/home-page/home-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/libs/home/src/lib/home-page/home-page.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tailwind.config.js" afterDir="false" />
+    </list>
     <list id="2b9df659-9f38-4103-a418-c88e1db790f9" name="Changes" comment="Add home lib" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,36 +48,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;temurin-21&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/IT-Dobler-website/frontend&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;D:\\IT-Dobler-website\\frontend\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "dart.analysis.tool.window.visible": "false",
+    "jdk.selected.JAVA_MODULE": "temurin-21",
+    "last_opened_file_path": "D:/IT-Dobler-website/frontend/src/assets/images/light-mode",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "show.migrate.to.gradle.popup": "false",
+    "ts.external.directory.path": "D:\\IT-Dobler-website\\frontend\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IT-Dobler-website\frontend\src\assets\images\light-mode" />
+      <recent name="D:\IT-Dobler-website\frontend\src\assets\images\dark-mode" />
       <recent name="D:\IT-Dobler-website\frontend" />
       <recent name="D:\IT-Dobler-website\frontend\src\assets" />
       <recent name="D:\IT-Dobler-website\frontend\libs\ui\src\lib" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\IT-Dobler-website\frontend\src\assets\images\dark-mode" />
+      <recent name="D:\IT-Dobler-website\frontend\src\assets\images" />
       <recent name="D:\IT-Dobler-website\frontend\src\assets" />
+      <recent name="D:\IT-Dobler-website\frontend\src\assets\$" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -70,7 +100,7 @@
       <workItem from="1706381703887" duration="12025000" />
       <workItem from="1706432525248" duration="3493000" />
       <workItem from="1706447648164" duration="929000" />
-      <workItem from="1706509896308" duration="8039000" />
+      <workItem from="1706509896308" duration="10390000" />
     </task>
     <task id="LOCAL-00001" summary="Add Angular app as Nx Workspace">
       <option name="closed" value="true" />
@@ -152,7 +182,23 @@
       <option name="project" value="LOCAL" />
       <updated>1706547277303</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="- Fixed deployment github action">
+      <option name="closed" value="true" />
+      <created>1706547467713</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1706547467713</updated>
+    </task>
+    <task id="LOCAL-00012" summary=".gitignore for .idea files">
+      <option name="closed" value="true" />
+      <created>1706547545495</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1706547545496</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,6 +215,8 @@
     <MESSAGE value="Add home lib" />
     <MESSAGE value="Intellij config and unused import" />
     <MESSAGE value="- Fixed deployment github action&#10;- Removed package-lock.json" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Fixed deployment github action&#10;- Removed package-lock.json" />
+    <MESSAGE value="- Fixed deployment github action" />
+    <MESSAGE value=".gitignore for .idea files" />
+    <option name="LAST_COMMIT_MESSAGE" value=".gitignore for .idea files" />
   </component>
 </project>

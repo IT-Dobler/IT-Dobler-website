@@ -24,6 +24,7 @@ module.exports = {
       listStyleImage: {
           'li-point': 'url("/assets/li-point.svg")',
           'li-point-dark': 'url("/assets/li-point-dark.svg")',
+          'dark:li-point': 'url("/assets/li-point-dark.svg")',
       },
     },
   },
