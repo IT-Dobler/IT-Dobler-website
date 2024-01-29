@@ -4,11 +4,46 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b9df659-9f38-4103-a418-c88e1db790f9" name="Changes" comment="Add UI lib">
+    <list default="true" id="6783cce6-3189-40bc-9b7e-d42c82bc09de" name="Other changes" comment="Basic UI components&#10;- Card, Footer, Header, standard-section-layout.component and Standard-page-layout">
+      <change beforePath="$PROJECT_DIR$/frontend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/project.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/project.json" afterDir="false" />
+    </list>
+    <list id="2b9df659-9f38-4103-a418-c88e1db790f9" name="Changes" comment="Add home component and added routing&#10;Removed .spec files">
+      <change afterPath="$PROJECT_DIR$/frontend/libs/home/.eslintrc.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/libs/home/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/libs/home/jest.config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/libs/home/project.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/libs/home/src/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/libs/home/src/lib/home-page/home-page.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/libs/home/src/lib/home-page/home-page.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/libs/home/src/test-setup.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/libs/home/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/libs/home/tsconfig.lib.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/libs/home/tsconfig.spec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/assets/bg-illustration-dark.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/assets/bg-illustration.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/assets/i18n/en.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/assets/landing-page.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/assets/li-point-dark.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/assets/li-point.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/assets/logo-dark.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/assets/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/tailwind.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/libs/ui/src/lib/ui/ui.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/libs/ui/src/lib/ui/ui.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.eslintrc.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/nx.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/nx.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.config.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/app.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/home/home.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/home/home.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/i18n/de.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/nx-welcome.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/styles.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/tsconfig.base.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tsconfig.base.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,53 +62,54 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "dart.analysis.tool.window.visible": "false",
-    "jdk.selected.JAVA_MODULE": "temurin-21",
-    "last_opened_file_path": "D:/IT-Dobler-website",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "show.migrate.to.gradle.popup": "false",
-    "ts.external.directory.path": "D:\\IT-Dobler-website\\frontend\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;temurin-21&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/IT-Dobler-website/frontend&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\IT-Dobler-website\\frontend\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="IT-Dobler-website" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="IT-Dobler-website" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IT-Dobler-website\frontend" />
+      <recent name="D:\IT-Dobler-website\frontend\src\assets" />
+      <recent name="D:\IT-Dobler-website\frontend\libs\ui\src\lib" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\IT-Dobler-website\frontend\src\assets" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="2b9df659-9f38-4103-a418-c88e1db790f9" name="Changes" comment="" />
+      <changelist id="6783cce6-3189-40bc-9b7e-d42c82bc09de" name="Other changes" comment="" />
       <created>1706374683553</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1706374683553</updated>
       <workItem from="1706374685003" duration="5152000" />
       <workItem from="1706379938032" duration="167000" />
-      <workItem from="1706380112970" duration="1120000" />
+      <workItem from="1706380112970" duration="1554000" />
+      <workItem from="1706381703887" duration="12025000" />
+      <workItem from="1706432525248" duration="3493000" />
+      <workItem from="1706447648164" duration="929000" />
+      <workItem from="1706509896308" duration="6534000" />
     </task>
     <task id="LOCAL-00001" summary="Add Angular app as Nx Workspace">
       <option name="closed" value="true" />
@@ -91,7 +127,23 @@
       <option name="project" value="LOCAL" />
       <updated>1706379637726</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add home component and added routing&#10;Removed .spec files">
+      <option name="closed" value="true" />
+      <created>1706381607121</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1706381607121</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Basic UI components&#10;- Card, Footer, Header, standard-section-layout.component and Standard-page-layout">
+      <option name="closed" value="true" />
+      <created>1706545846761</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1706545846761</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -100,6 +152,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add Angular app as Nx Workspace" />
     <MESSAGE value="Add UI lib" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add UI lib" />
+    <MESSAGE value="Add home component and added routing&#10;Removed .spec files" />
+    <MESSAGE value="Basic UI components&#10;- Card, Footer, Header, standard-section-layout.component and Standard-page-layout" />
+    <option name="LAST_COMMIT_MESSAGE" value="Basic UI components&#10;- Card, Footer, Header, standard-section-layout.component and Standard-page-layout" />
   </component>
 </project>

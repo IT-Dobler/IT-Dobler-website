@@ -65,7 +65,8 @@
       "unitTestRunner": "jest"
     },
     "@nx/angular:component": {
-      "style": "scss"
+      "changeDetection": "OnPush",
+      "skipTests": true
     }
   },
   "defaultProject": "frontend"
