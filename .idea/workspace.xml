@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6783cce6-3189-40bc-9b7e-d42c82bc09de" name="Other changes" comment="Cleanup and importing of the added technologies" />
+    <list default="true" id="6783cce6-3189-40bc-9b7e-d42c82bc09de" name="Other changes" comment="Intellij config and unused import">
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" />
+    </list>
     <list id="2b9df659-9f38-4103-a418-c88e1db790f9" name="Changes" comment="Add home lib" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +72,7 @@
       <workItem from="1706381703887" duration="12025000" />
       <workItem from="1706432525248" duration="3493000" />
       <workItem from="1706447648164" duration="929000" />
-      <workItem from="1706509896308" duration="6998000" />
+      <workItem from="1706509896308" duration="7688000" />
     </task>
     <task id="LOCAL-00001" summary="Add Angular app as Nx Workspace">
       <option name="closed" value="true" />
@@ -136,7 +138,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706546341067</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Intellij config and unused import">
+      <option name="closed" value="true" />
+      <created>1706546517173</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1706546517173</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -151,6 +161,7 @@
     <MESSAGE value="Added basic assets" />
     <MESSAGE value="Cleanup and importing of the added technologies" />
     <MESSAGE value="Add home lib" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add home lib" />
+    <MESSAGE value="Intellij config and unused import" />
+    <option name="LAST_COMMIT_MESSAGE" value="Intellij config and unused import" />
   </component>
 </project>
