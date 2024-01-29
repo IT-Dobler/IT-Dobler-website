@@ -1,15 +1,10 @@
 import { Route } from '@angular/router';
-import {NxWelcomeComponent} from "./nx-welcome.component";
-import {HomeComponent} from "./home/home.component";
+import {HomePageComponent} from "@frontend/home";
 
 export const appRoutes: Route[] = [
   {
     path: '',
-    component: HomeComponent,
+    component: HomePageComponent,
     pathMatch: 'full'
-  },
-  {
-    path: 'test',
-    loadComponent: () => import('@frontend/ui').then((m) => m.UiComponent)
   }
 ];
