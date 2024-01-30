@@ -1,11 +1,11 @@
-<itd-standard-page-layout>
+<itd-single-col-page-layout>
     <section class="flex justify-center pt-28">
         <itd-language-and-theme-aware-image imageName="logo-landing-page"></itd-language-and-theme-aware-image>
     </section>
     <div></div>
     <hr class="border-gold mt-12 mb-12">
     <section class="flex justify-center">
-        <card-component class="w-5/12" [title]="'why.title' | translate" shade="light-gold">
+        <itd-card-component class="w-5/12" [title]="'why.title' | translate" shade="light-gold">
             <div class="flex text-sm text-black mb-12">
                 <itd-bullet-list shade="light-gold">
                     <li [innerHTML]="'why.point-1' | translate"></li>
@@ -21,11 +21,11 @@
                     <li [innerHTML]="'why.point-9' | translate"></li>
                 </itd-bullet-list>
             </div>
-        </card-component>
+        </itd-card-component>
     </section>
     <hr class="border-gold mt-12 mb-12">
     <section class="flex justify-center">
-        <card-component class="w-5/12" [title]="'project-planning.title' | translate" shade="gold">
+        <itd-card-component class="w-5/12" [title]="'project-planning.title' | translate" shade="gold">
             <div class="flex text-sm text-white mb-12">
                 <itd-bullet-list shade="gold">
                     <li [innerHTML]="'project-planning.point-1' | translate"></li>
@@ -38,11 +38,11 @@
                     <li [innerHTML]="'project-planning.point-6' | translate"></li>
                 </itd-bullet-list>
             </div>
-        </card-component>
+        </itd-card-component>
     </section>
     <hr class="border-gold mt-12 mb-12">
     <itd-standard-section-layout>
-        <card-component [title]="'our-stack.title' | translate" shade="light-gold">
+        <itd-card-component [title]="'our-stack.title' | translate" shade="light-gold">
             <itd-bullet-list shade="light-gold">
                 <li translate>our-stack.point-1</li>
                 <li translate>our-stack.point-2</li>
@@ -56,18 +56,18 @@
             <itd-bullet-list shade="light-gold">
                 <li translate>our-stack.point-3</li>
             </itd-bullet-list>
-        </card-component>
+        </itd-card-component>
     </itd-standard-section-layout>
     <hr class="border-gold mt-12 mb-12">
     <itd-standard-section-layout>
-        <card-component [title]="'references.title' | translate" shade="gold">
+        <itd-card-component [title]="'references.title' | translate" shade="gold">
             <itd-bullet-list shade="gold">
                 <li translate>references.point-1</li>
             </itd-bullet-list>
 
             <h3 translate>references.current.title</h3>
             <p translate>references.current.contractor</p>
-            <p translate>references.current.happy-post</p>
+            <p translate [routerLink]="[Path.REFERENCES]">references.current.happy-post</p>
             <p translate>references.current.saf-timer</p>
             <p translate>references.current.yp</p>
 
@@ -76,13 +76,13 @@
             <p translate>references.realized.halma</p>
             <p translate>references.realized.gu</p>
             <p translate>references.realized.websites</p>
-        </card-component>
+        </itd-card-component>
     </itd-standard-section-layout>
     <hr class="border-gold mt-12 mb-12">
     <itd-standard-section-layout>
-        <card-component title="Unternehmen" shade="light-gold">
+        <itd-card-component title="Unternehmen" shade="light-gold">
             <p [innerHTML]="'company.description' | translate"></p>
-        </card-component>
+        </itd-card-component>
     </itd-standard-section-layout>
     <hr class="border-gold mt-12 mb-12">
     <itd-standard-section-layout>
@@ -111,4 +111,4 @@
             </div>
         </div>
     </itd-standard-section-layout>
-</itd-standard-page-layout>
+</itd-single-col-page-layout>

@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import {Shade} from "../shade";
 
 @Component({
-  selector: 'card-component',
+  selector: 'itd-card-component',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './card.component.html',

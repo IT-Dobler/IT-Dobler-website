@@ -1,0 +1,21 @@
+<itd-standard-page-layout>
+<!--    TODO Maybe put this into its own component-->
+    <div header class="flex justify-center border-b-2 border-b-gold bg-white dark:bg-dark-blue">
+        <div class="flex-1"></div>
+        <div class="flex">
+            <img *ngIf="logoName" [src]="getImagePath()" alt="Logo of reference">
+            <span>{{titleKey | translate}}</span>
+        </div>
+        <div class="flex-1">
+            <div class="ml-auto w-1 mr-10" routerLink="/">X</div>
+        </div>
+    </div>
+
+    <div class="mx-auto w-5/12">
+        <div class="grid grid-cols-2">
+            <ng-content></ng-content>
+        </div>
+    </div>
+
+</itd-standard-page-layout>
+
