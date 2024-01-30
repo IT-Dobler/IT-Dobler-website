@@ -1,5 +1,5 @@
 import {createActionGroup, emptyProps, props} from "@ngrx/store";
-import {Language, settingsFeature, Theme} from "./settings.feature";
+import {Language, Theme} from "./settings.feature";
 
 export const SettingsApiEvents = createActionGroup({
   source: 'Settings API',

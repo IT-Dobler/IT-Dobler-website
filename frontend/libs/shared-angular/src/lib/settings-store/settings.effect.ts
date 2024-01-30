@@ -4,7 +4,7 @@ import {inject} from "@angular/core";
 import {select, Store} from "@ngrx/store";
 import {SettingsApiEvents} from "./settings.events";
 import {selectLanguage, selectSettingsState, selectTheme} from "./settings.feature";
-import {TranslateService, TranslateStore} from "@ngx-translate/core";
+import {TranslateService} from "@ngx-translate/core";
 
 export const SETTINGS_KEY = 'SETTINGS'
 
@@ -13,7 +13,7 @@ export const persistSettings = createEffect(
       return events$.pipe(
           ofType(SettingsApiEvents.changeLanguage, SettingsApiEvents.changeTheme),
           withLatestFrom(store.select(selectSettingsState)),
-          exhaustMap(([action, state]) => {
+          exhaustMap(([_, state]) => {
             localStorage.setItem(SETTINGS_KEY, JSON.stringify(state));
 
             return EMPTY;
