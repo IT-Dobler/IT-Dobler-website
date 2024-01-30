@@ -66,14 +66,14 @@
             </itd-bullet-list>
 
             <h3 translate>references.current.title</h3>
-            <p translate>references.current.contractor</p>
-            <p translate [routerLink]="[Path.REFERENCES]">references.current.happy-post</p>
-            <p translate>references.current.saf-timer</p>
-            <p translate>references.current.yp</p>
+            <p translate [routerLink]="[Path.REFERENCES + '/' + Path.CONTRACTOR]">references.current.contractor</p>
+            <p translate [routerLink]="[Path.REFERENCES + '/' + Path.HAPPY_POST]">references.current.happy-post</p>
+            <p translate [routerLink]="[Path.REFERENCES + '/' + Path.SAF_TIMER]">references.current.saf-timer</p>
+            <p translate [routerLink]="[Path.REFERENCES + '/' + Path.YACHT_PARTNER]">references.current.yp</p>
 
             <h3 translate>references.realized.title</h3>
             <p translate>references.realized.it-dobler</p>
-            <p translate>references.realized.halma</p>
+            <p translate [routerLink]="[Path.REFERENCES + '/' + Path.HALMA]">references.realized.halma</p>
             <p translate>references.realized.gu</p>
             <p translate>references.realized.websites</p>
         </itd-card-component>
