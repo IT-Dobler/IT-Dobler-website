@@ -1,5 +1,5 @@
 import {ApplicationConfig, ENVIRONMENT_INITIALIZER, importProvidersFrom, inject} from '@angular/core';
-import {provideRouter} from '@angular/router';
+import {provideRouter, withInMemoryScrolling, withRouterConfig} from '@angular/router';
 import {appRoutes} from './app.routes';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
@@ -19,7 +19,14 @@ export function httpLoaderFactory(http: HttpClient) {
 export const appConfig: ApplicationConfig = {
   providers: [
 
-    provideRouter(appRoutes),
+    provideRouter(appRoutes,
+        withRouterConfig({
+
+        }),
+        withInMemoryScrolling({
+          anchorScrolling: 'enabled',
+          scrollPositionRestoration: 'enabled'
+        })),
 
     // State management
     provideStore({

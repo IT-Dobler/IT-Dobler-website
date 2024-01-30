@@ -4,28 +4,28 @@
     </section>
     <div></div>
     <hr class="border-gold mt-12 mb-12">
-    <section class="flex justify-center">
-        <itd-card-component class="w-5/12" [title]="'why.title' | translate" shade="light-gold">
+    <itd-standard-section-layout [id]="Path.WHY_US">
+        <itd-card-component [title]="'why-us.title' | translate" shade="light-gold">
             <div class="flex text-sm text-black mb-12">
                 <itd-bullet-list shade="light-gold">
-                    <li [innerHTML]="'why.point-1' | translate"></li>
-                    <li [innerHTML]="'why.point-2' | translate"></li>
-                    <li [innerHTML]="'why.point-3' | translate"></li>
-                    <li [innerHTML]="'why.point-4' | translate"></li>
-                    <li [innerHTML]="'why.point-5' | translate"></li>
+                    <li [innerHTML]="'why-us.point-1' | translate"></li>
+                    <li [innerHTML]="'why-us.point-2' | translate"></li>
+                    <li [innerHTML]="'why-us.point-3' | translate"></li>
+                    <li [innerHTML]="'why-us.point-4' | translate"></li>
+                    <li [innerHTML]="'why-us.point-5' | translate"></li>
                 </itd-bullet-list>
                 <itd-bullet-list shade="light-gold">
-                    <li [innerHTML]="'why.point-6' | translate"></li>
-                    <li [innerHTML]="'why.point-7' | translate"></li>
-                    <li [innerHTML]="'why.point-8' | translate"></li>
-                    <li [innerHTML]="'why.point-9' | translate"></li>
+                    <li [innerHTML]="'why-us.point-6' | translate"></li>
+                    <li [innerHTML]="'why-us.point-7' | translate"></li>
+                    <li [innerHTML]="'why-us.point-8' | translate"></li>
+                    <li [innerHTML]="'why-us.point-9' | translate"></li>
                 </itd-bullet-list>
             </div>
         </itd-card-component>
-    </section>
+    </itd-standard-section-layout>
     <hr class="border-gold mt-12 mb-12">
-    <section class="flex justify-center">
-        <itd-card-component class="w-5/12" [title]="'project-planning.title' | translate" shade="gold">
+    <itd-standard-section-layout [id]="Path.PLANNING">
+        <itd-card-component [title]="'project-planning.title' | translate" shade="gold">
             <div class="flex text-sm text-white mb-12">
                 <itd-bullet-list shade="gold">
                     <li [innerHTML]="'project-planning.point-1' | translate"></li>
@@ -39,9 +39,9 @@
                 </itd-bullet-list>
             </div>
         </itd-card-component>
-    </section>
+    </itd-standard-section-layout>
     <hr class="border-gold mt-12 mb-12">
-    <itd-standard-section-layout>
+    <itd-standard-section-layout [id]="Path.OUR_STACK">
         <itd-card-component [title]="'our-stack.title' | translate" shade="light-gold">
             <itd-bullet-list shade="light-gold">
                 <li translate>our-stack.point-1</li>
@@ -59,7 +59,7 @@
         </itd-card-component>
     </itd-standard-section-layout>
     <hr class="border-gold mt-12 mb-12">
-    <itd-standard-section-layout>
+    <itd-standard-section-layout [id]="Path.REFERENCES">
         <itd-card-component [title]="'references.title' | translate" shade="gold">
             <itd-bullet-list shade="gold">
                 <li translate>references.point-1</li>
@@ -79,13 +79,13 @@
         </itd-card-component>
     </itd-standard-section-layout>
     <hr class="border-gold mt-12 mb-12">
-    <itd-standard-section-layout>
+    <itd-standard-section-layout [id]="Path.COMPANY">
         <itd-card-component title="Unternehmen" shade="light-gold">
             <p [innerHTML]="'company.description' | translate"></p>
         </itd-card-component>
     </itd-standard-section-layout>
     <hr class="border-gold mt-12 mb-12">
-    <itd-standard-section-layout>
+    <itd-standard-section-layout [id]="Path.CONTACT">
         <h1 translate>contact.title</h1>
         <div class="flex flex-row justify-center">
             <div>

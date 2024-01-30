@@ -6,11 +6,12 @@
             </a>
         </div>
         <ul class="flex justify-around items-center font-light text-xl text-gold">
-            <li class="p-5"><a class="hover:text-white" routerLink="/">Planung</a></li>
-            <li class="p-5"><a class="hover:text-white" routerLink="/test">Unser Stack</a></li>
-            <li class="p-5"><a class="hover:text-white" routerLink="/test">Referenzen</a></li>
-            <li class="p-5"><a class="hover:text-white" routerLink="/test">Unternehmen</a></li>
-            <li class="p-5"><a class="hover:text-white" routerLink="/test">Kontakt</a></li>
+            <li class="p-5"><a class="hover:text-white" (click)="scrollTo(Path.WHY_US)" translate>menu.why-us</a></li>
+            <li class="p-5"><a class="hover:text-white" (click)="scrollTo(Path.PLANNING)" translate>menu.planning</a></li>
+            <li class="p-5"><a class="hover:text-white" (click)="scrollTo(Path.OUR_STACK)" translate>menu.our-stack</a></li>
+            <li class="p-5"><a class="hover:text-white" (click)="scrollTo(Path.REFERENCES)" translate>menu.references</a></li>
+            <li class="p-5"><a class="hover:text-white" (click)="scrollTo(Path.COMPANY)" translate>menu.company</a></li>
+            <li class="p-5"><a class="hover:text-white" (click)="scrollTo(Path.CONTACT)" translate>menu.contact</a></li>
             <li class="p-5"><a class="hover:text-white" (click)="toggleTheme()">Light | Dark</a></li>
             <li class="p-5"><itd-language-select></itd-language-select></li>
         </ul>

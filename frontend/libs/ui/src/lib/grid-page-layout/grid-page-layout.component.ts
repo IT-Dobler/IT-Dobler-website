@@ -4,6 +4,7 @@ import {StandardPageLayoutComponent} from "../standard-page-layout/standard-page
 import {CardComponent} from "../card-component/card.component";
 import {RouterLink} from "@angular/router";
 import {TranslateModule} from "@ngx-translate/core";
+import {Path} from "@frontend/shared-angular";
 
 @Component({
   selector: 'itd-grid-page-layout',
@@ -19,4 +20,6 @@ export class GridPageLayoutComponent {
   public getImagePath(): string {
     return `assets/images/${this.logoName}.svg`;
   }
+
+  protected readonly Path = Path;
 }
