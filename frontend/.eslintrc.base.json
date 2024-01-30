@@ -18,6 +18,7 @@
         "@nx/enforce-module-boundaries": [
           "error",
           {
+            "banTransitiveImports": true,
             "enforceBuildableLibDependency": true,
             "allow": [],
             "depConstraints": [
