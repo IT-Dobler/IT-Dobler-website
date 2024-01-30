@@ -1,0 +1,1 @@
+export type Shade = 'gold' | 'light-gold';

@@ -6,8 +6,8 @@ export type Language = 'en' | 'sk' | 'de' | 'fr' | 'es' | 'pt-br' | 'he' | 'ar';
 export type Theme = 'light' | 'dark';
 
 export interface SettingsState {
-  language: string;
-  theme: string;
+  language: Language;
+  theme: Theme;
 }
 
 export const initialSettingsState: SettingsState = {
