@@ -65,6 +65,7 @@
       "unitTestRunner": "jest"
     },
     "@nx/angular:component": {
+      "style": "css",
       "changeDetection": "OnPush",
       "skipTests": true
     }
