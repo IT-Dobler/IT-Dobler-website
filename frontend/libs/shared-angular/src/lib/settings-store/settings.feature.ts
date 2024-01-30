@@ -1,8 +1,8 @@
 import {createFeature, createReducer, on} from "@ngrx/store";
 import {SettingsApiEvents} from "./settings.events";
 
-export type Language = 'en' | 'sk' | 'de' | 'fr' | 'es' | 'pt-br' | 'he' | 'ar';
-
+export type Language = 'en' | 'de' | 'es';
+export const SUPPORTED_LANGUAGES = ['en', 'de', 'es'];
 export type Theme = 'light' | 'dark';
 
 export interface SettingsState {

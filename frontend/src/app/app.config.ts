@@ -1,13 +1,13 @@
-import {ApplicationConfig, importProvidersFrom} from '@angular/core';
+import {ApplicationConfig, ENVIRONMENT_INITIALIZER, importProvidersFrom, inject} from '@angular/core';
 import {provideRouter} from '@angular/router';
 import {appRoutes} from './app.routes';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
-import {provideStore, provideState} from '@ngrx/store';
+import {provideStore, provideState, Store} from '@ngrx/store';
 import {provideEffects} from '@ngrx/effects';
 import {provideRouterStore, routerReducer} from "@ngrx/router-store";
-import {settingsEffects} from "@frontend/shared-angular";
+import {SettingsApiEvents, settingsEffects} from "@frontend/shared-angular";
 import {settingsFeature} from "@frontend/shared-angular";
 import {provideStoreDevtools} from "@ngrx/store-devtools";
 
@@ -18,20 +18,26 @@ export function httpLoaderFactory(http: HttpClient) {
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideEffects(settingsEffects),
-    provideState(settingsFeature),
 
     provideRouter(appRoutes),
 
+    // State management
     provideStore({
       router: routerReducer,
     }),
+
+    provideState(settingsFeature),
+    provideEffects(settingsEffects),
+
     provideRouterStore(),
+
     provideStoreDevtools(),
+
+
     importProvidersFrom(HttpClientModule),
     importProvidersFrom(
         TranslateModule.forRoot({
-          defaultLanguage: 'en',
+          useDefaultLang: false,  // easier to notice missing translations
           loader: {
             provide: TranslateLoader,
             useFactory: httpLoaderFactory,
@@ -39,5 +45,14 @@ export const appConfig: ApplicationConfig = {
           },
         })
     ),
+    // init (has to last, order matters)
+    {
+      provide: ENVIRONMENT_INITIALIZER,
+      multi: true,
+      useValue() {
+        const store = inject(Store);
+        store.dispatch(SettingsApiEvents.initSettings());
+      }
+    }
   ],
 };
