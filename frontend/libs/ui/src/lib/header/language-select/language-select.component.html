@@ -1,0 +1,7 @@
+<div>
+    <a [ngClass]="languageSig() === 'de' ? 'text-black underline' : ''" (click)="selectLanguage('de')">DE</a>
+    <span>|</span>
+    <a [ngClass]="languageSig() === 'en' ? 'text-black underline' : ''" (click)="selectLanguage('en')">EN</a>
+    <span>|</span>
+    <a [ngClass]="languageSig() === 'es' ? 'text-black underline' : ''" (click)="selectLanguage('es')">ES</a>
+</div>
