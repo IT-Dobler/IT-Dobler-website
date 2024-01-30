@@ -5,11 +5,12 @@ import {Store} from "@ngrx/store";
 import {SettingsApiEvents} from "@frontend/shared-angular";
 import {selectTheme} from "@frontend/shared-angular";
 import {LanguageSelectComponent} from "./language-select/language-select.component";
+import {LanguageAndThemeAwareImageComponent} from "../language-and-theme-aware-image/language-and-theme-aware-image.component";
 
 @Component({
   selector: 'itd-header',
   standalone: true,
-  imports: [CommonModule, RouterLink, LanguageSelectComponent],
+  imports: [CommonModule, RouterLink, LanguageSelectComponent, LanguageAndThemeAwareImageComponent],
   templateUrl: './header.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })

@@ -1,6 +1,11 @@
 import {ChangeDetectionStrategy, Component} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {BulletListComponent, CardComponent, StandardPageLayoutComponent} from "@frontend/ui";
+import {
+  BulletListComponent,
+  CardComponent,
+  LanguageAndThemeAwareImageComponent,
+  StandardPageLayoutComponent
+} from "@frontend/ui";
 import {TranslateModule} from "@ngx-translate/core";
 import {
   StandardSectionLayoutComponent
@@ -9,7 +14,7 @@ import {
 @Component({
   selector: 'itd-home',
   standalone: true,
-  imports: [CommonModule, StandardPageLayoutComponent, CardComponent, TranslateModule, StandardSectionLayoutComponent, BulletListComponent],
+  imports: [CommonModule, StandardPageLayoutComponent, CardComponent, TranslateModule, StandardSectionLayoutComponent, BulletListComponent, LanguageAndThemeAwareImageComponent],
   templateUrl: './home-page.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
