@@ -77,7 +77,7 @@
   },
   "engines": {
     "npm": "please-use-yarn",
-    "yarn": ">= 1.22.19",
+    "yarn": ">= 1.22.15",
     "node": ">= 20.11.0"
   }
 }
