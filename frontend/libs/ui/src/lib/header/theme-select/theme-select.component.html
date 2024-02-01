@@ -1,0 +1,6 @@
+<div>
+    <a class="cursor-pointer" (click)="toggleTheme()">
+        <itd-sun-svg *ngIf="themeSig() === 'dark'" class="text-xs text-gold hover:text-light-gold"></itd-sun-svg>
+        <itd-moon-svg *ngIf="themeSig() === 'light'" class="text-gold hover:text-itd-black"></itd-moon-svg>
+    </a>
+</div>

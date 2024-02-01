@@ -1,18 +1,20 @@
 <itd-standard-page-layout>
 <!--    TODO Maybe put this into its own component-->
-    <div header class="flex justify-center border-b-2 border-b-gold bg-white dark:bg-dark-blue">
+    <div header class="flex justify-center items-center border-b-2 border-b-gold drop-shadow-md h-[100px]">
         <div class="flex-1"></div>
         <div class="flex">
-            <img *ngIf="logoName" [src]="getImagePath()" alt="Logo of reference">
-            <span>{{titleKey | translate}}</span>
+            <img *ngIf="logoName" [src]="getImagePath()" alt="Logo of reference" class="mr-4 h-8">
+            <h1 class="font-orbitron text-2xl text-gold">{{titleKey | translate}}</h1>
         </div>
         <div class="flex-1">
-            <div class="ml-auto w-1 mr-10" routerLink="/" [fragment]="Path.REFERENCES">X</div>
+            <div class="ml-auto w-1 mr-32 cursor-pointer" routerLink="/" [fragment]="Path.REFERENCES">
+                <itd-close-svg></itd-close-svg>
+            </div>
         </div>
     </div>
 
-    <div class="mx-auto w-5/12">
-        <div class="grid grid-cols-2">
+    <div class="mx-auto w-5/12 mt-8">
+        <div class="grid grid-cols-2 gap-8">
             <ng-content></ng-content>
         </div>
     </div>

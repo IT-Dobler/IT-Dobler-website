@@ -15,9 +15,9 @@ export class BulletListComponent {
   public getListPointClass(): string {
     // Defined in tailwind.config.js under listStyleImage
     if (this.shade === 'light-gold') {
-      return 'list-image-list-point-gold';
+      return 'list-image-list-point-gold dark:list-image-list-point-gold';
     } else {
-      return 'list-image-list-point-white dark:list-image-list-point-gold';
+      return 'list-image-list-point-white dark:list-image-list-point-light-gold';
     }
   }
 }

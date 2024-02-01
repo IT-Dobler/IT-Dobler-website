@@ -1,19 +1,20 @@
-<nav class="flex justify-center border-b-2 border-b-gold bg-white dark:bg-dark-blue">
+<nav class="flex justify-center border-b-2 border-b-gold bg-white dark:bg-itd-black drop-shadow-md">
     <div class="flex justify-between w-8/12">
-        <div class="p-3">
+        <div class="p-3 h-[100px] flex-shrink-0">
             <a routerLink="/">
                 <itd-language-and-theme-aware-image imageName="logo"></itd-language-and-theme-aware-image>
             </a>
         </div>
-        <ul class="flex justify-around items-center font-light text-xl text-gold">
-            <li class="p-5"><a class="hover:text-white" (click)="scrollTo(Path.WHY_US)" translate>menu.why-us</a></li>
-            <li class="p-5"><a class="hover:text-white" (click)="scrollTo(Path.PLANNING)" translate>menu.planning</a></li>
-            <li class="p-5"><a class="hover:text-white" (click)="scrollTo(Path.OUR_STACK)" translate>menu.our-stack</a></li>
-            <li class="p-5"><a class="hover:text-white" (click)="scrollTo(Path.REFERENCES)" translate>menu.references</a></li>
-            <li class="p-5"><a class="hover:text-white" (click)="scrollTo(Path.COMPANY)" translate>menu.company</a></li>
-            <li class="p-5"><a class="hover:text-white" (click)="scrollTo(Path.CONTACT)" translate>menu.contact</a></li>
-            <li class="p-5"><a class="hover:text-white" (click)="toggleTheme()">Light | Dark</a></li>
+        <ul class="flex justify-around items-center font-light text-base text-gold font-orbitron">
+            <li class="p-5"><a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer" (click)="scrollTo(Path.WHY_US)" translate>menu.why-us</a></li>
+            <li class="p-5"><a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer" (click)="scrollTo(Path.PLANNING)" translate>menu.planning</a></li>
+            <li class="p-5"><a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer" (click)="scrollTo(Path.OUR_STACK)" translate>menu.our-stack</a></li>
+            <li class="p-5"><a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer" (click)="scrollTo(Path.REFERENCES)" translate>menu.references</a></li>
+            <li class="p-5"><a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer" (click)="scrollTo(Path.COMPANY)" translate>menu.company</a></li>
+            <li class="p-5"><a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer" (click)="scrollTo(Path.CONTACT)" translate>menu.contact</a></li>
+            <li><itd-linkedin-svg class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer" (click)="openLinedIn()"></itd-linkedin-svg></li>
             <li class="p-5"><itd-language-select></itd-language-select></li>
+            <li><itd-theme-select></itd-theme-select></li>
         </ul>
 
     </div>

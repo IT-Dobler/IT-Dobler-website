@@ -5,6 +5,8 @@ import {HappyPostPageComponent} from "./happy-post-page/happy-post-page.componen
 import {SafTimerPageComponent} from "./saf-timer-page/saf-timer-page.component";
 import {YpPageComponent} from "./yp-page/yp-page.component";
 import {HalmaPageComponent} from "./halma-page/halma-page.component";
+import {ItDoblerPageComponent} from "./it-dobler-page/it-dobler-page.component";
+import {WebsitesPageComponent} from "./websites-page/websites-page.component";
 
 export const referencesRoutes: Route[] = [
   {
@@ -35,6 +37,16 @@ export const referencesRoutes: Route[] = [
         path: Path.HALMA,
         title: 'Halma42',  // TODO Translate
         component: HalmaPageComponent
+      },
+      {
+        path: Path.IT_DOBLER,
+        title: 'It Dobler',  // TODO Translate
+        component: ItDoblerPageComponent
+      },
+      {
+        path: Path.WEBSITES,
+        title: 'Websites',  // TODO Translate
+        component: WebsitesPageComponent
       },
       {
         path: '**',

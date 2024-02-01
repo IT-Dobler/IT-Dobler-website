@@ -12,4 +12,6 @@ export enum Path {
   YACHT_PARTNER = 'yacht-partner',
   SAF_TIMER = 'saf-timer',
   HALMA = 'halma',
+  WEBSITES = 'websites',
+  IT_DOBLER = 'it-dobler',
 }

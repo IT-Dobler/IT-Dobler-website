@@ -1,5 +1,7 @@
 <div class="bg-repeat-round p-12" [ngClass]="getBackgroundClass()">
     <h2 class="text-2xl text-center font-orbitron mb-12 text-gold"
-        [ngClass]="shade === 'light-gold' ? 'text-gold' : 'text-white'">{{title}}</h2>
-    <ng-content></ng-content>
+        [ngClass]="shade === 'light-gold' ? 'text-gold' : 'text-white dark:text-light-gold'">{{title}}</h2>
+    <div [ngClass]="shade === 'light-gold' ? 'text-itd-black dark:text-light-gold' : 'text-white dark:text-gold'">
+        <ng-content></ng-content>
+    </div>
 </div>

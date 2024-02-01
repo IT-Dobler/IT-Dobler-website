@@ -11,8 +11,9 @@ module.exports = {
     theme: {
         extend: {
             colors: {
+                'itd-black': '#09090B',
                 'gold': '#DCA54C',
-                'dark-blue': '#001F29',
+                'light-gold': '#F5E4C9',
             },
             backgroundImage: {
                 'dark-card-border-gold': 'url("/assets/images/dark-mode/card-border-gold.svg")',
@@ -22,6 +23,7 @@ module.exports = {
             },
             fontFamily: {
                 'orbitron': ['Orbitron', 'sans-serif'],
+                'roboto': ['Roboto', 'sans-serif'],
             },
             listStyleImage: {
                 'list-point-gold': 'url("/assets/images/list-point-gold.svg")',

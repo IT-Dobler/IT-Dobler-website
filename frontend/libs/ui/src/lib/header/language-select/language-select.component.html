@@ -1,7 +1,7 @@
 <div>
-    <a [ngClass]="languageSig() === 'de' ? 'text-black underline' : ''" (click)="selectLanguage('de')">DE</a>
-    <span>|</span>
-    <a [ngClass]="languageSig() === 'en' ? 'text-black underline' : ''" (click)="selectLanguage('en')">EN</a>
-    <span>|</span>
-    <a [ngClass]="languageSig() === 'es' ? 'text-black underline' : ''" (click)="selectLanguage('es')">ES</a>
+    <a class="cursor-pointer hover:text-itd-black dark:hover:text-light-gold" [ngClass]="languageSig() === 'de' ? 'text-itd-black dark:text-light-gold' : ''" (click)="selectLanguage('de')">DE</a>
+    <span>&nbsp;</span>
+    <a class="cursor-pointer hover:text-itd-black dark:hover:text-light-gold" [ngClass]="languageSig() === 'en' ? 'text-itd-black dark:text-light-gold' : ''" (click)="selectLanguage('en')">EN</a>
+    <span>&nbsp;</span>
+    <a class="cursor-pointer hover:text-itd-black dark:hover:text-light-gold" [ngClass]="languageSig() === 'es' ? 'text-itd-black dark:text-light-gold' : ''" (click)="selectLanguage('es')">ES</a>
 </div>
