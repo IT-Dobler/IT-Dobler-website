@@ -1,0 +1,19 @@
+<itd-single-col-page-layout>
+    <itd-standard-section-layout [id]="Path.ABOUT_US">
+        <itd-card-component [title]="'team.title' | translate" shade="gold" class="[&>div>h2]:mb-6">
+            <div class="flex justify-center items-end mb-8">
+                <div class="flex-1 flex-grow">
+                    <h3 class="text-center text-itd-black dark:text-light-gold text-2xl">Yanic Dobler</h3>
+                    <h4 class="text-center text-itd-black dark:text-light-gold text"
+                        [innerHTML]="'team.yanic-dobler.title' | translate"></h4>
+                </div>
+                <div>
+                    <img src="assets/images/foto-yanic.svg">
+                </div>
+                <div class="flex-1 flex-grow">
+                </div>
+            </div>
+            <p [innerHTML]="'team.yanic-dobler.description' | translate"></p>
+        </itd-card-component>
+    </itd-standard-section-layout>
+</itd-single-col-page-layout>

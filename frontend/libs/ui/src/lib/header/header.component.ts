@@ -1,5 +1,5 @@
 import {ChangeDetectionStrategy, Component} from '@angular/core';
-import {CommonModule, ViewportScroller} from '@angular/common';
+import {CommonModule} from '@angular/common';
 import {RouterLink} from "@angular/router";
 import {Path} from "@frontend/shared-angular";
 import {LanguageSelectComponent} from "./language-select/language-select.component";
@@ -18,15 +18,6 @@ import {LinkedinSvgComponent} from "../linkedin-svg/linkedin-svg.component";
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HeaderComponent {
-
-
-  constructor(private viewportScroller: ViewportScroller) {
-  }
-
-  public scrollTo(elementId: string): void {
-    this.viewportScroller.scrollToAnchor(elementId);
-  }
-
   protected readonly Path = Path;
 
   public openLinedIn(): void {

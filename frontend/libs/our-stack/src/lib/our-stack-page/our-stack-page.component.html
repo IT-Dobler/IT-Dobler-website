@@ -1,0 +1,20 @@
+<itd-single-col-page-layout>
+    <itd-standard-section-layout [id]="Path.OUR_STACK">
+        <itd-card-component [title]="'our-stack.title' | translate" shade="light-gold">
+            <itd-bullet-list shade="light-gold">
+                <li translate>our-stack.point-1</li>
+                <li translate>our-stack.point-2</li>
+            </itd-bullet-list>
+            <br>
+            <h3 class="font-orbitron text-xl text-gold" translate>our-stack.services.title</h3>
+            <p translate>our-stack.services.description</p>
+            <br>
+            <h3 class="font-orbitron text-xl text-gold" translate>our-stack.tools.title</h3>
+            <p translate>our-stack.tools.description</p>
+            <br>
+            <itd-bullet-list shade="light-gold">
+                <li [innerHTML]="'our-stack.point-3' | translate"></li>
+            </itd-bullet-list>
+        </itd-card-component>
+    </itd-standard-section-layout>
+</itd-single-col-page-layout>

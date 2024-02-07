@@ -1,10 +1,11 @@
 export enum Path {
-  WHY_US = 'why-us',
+  SERVICES = 'services',
   PLANNING = 'planning',
   OUR_STACK = 'our-stack',
   REFERENCES = 'references',
-  COMPANY = 'company',
+  ABOUT_US = 'about-us',
   CONTACT = 'contact',
+  TEAM = 'team',
 
   // References sub-pages
   CONTRACTOR = 'contractor',

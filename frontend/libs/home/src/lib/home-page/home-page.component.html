@@ -1,24 +1,27 @@
-<itd-single-col-page-layout class="last:border-none">
+<itd-single-col-page-layout>
     <section class="flex justify-center pt-28 pb-12 border-b-2 border-gold shadow-md">
         <itd-language-and-theme-aware-image imageName="logo-landing-page"></itd-language-and-theme-aware-image>
     </section>
-    <itd-standard-section-layout [id]="Path.WHY_US">
-        <itd-card-component [title]="'why-us.title' | translate" shade="light-gold">
+    <itd-standard-section-layout [id]="Path.SERVICES">
+        <itd-card-component [title]="'services.title' | translate" shade="light-gold">
+            <h3 class="mb-8 text-xl font-orbitron text-gold" translate>
+                services.what-we-do
+            </h3>
             <div class="flex mb-12">
                 <itd-bullet-list shade="light-gold">
-                    <li [innerHTML]="'why-us.point-1' | translate"></li>
-                    <li [innerHTML]="'why-us.point-2' | translate"></li>
-                    <li [innerHTML]="'why-us.point-3' | translate"></li>
-                    <li [innerHTML]="'why-us.point-4' | translate"></li>
-                    <li [innerHTML]="'why-us.point-5' | translate"></li>
+                    <li [innerHTML]="'services.point-1' | translate"></li>
+                    <li [innerHTML]="'services.point-2' | translate"></li>
+                    <li [innerHTML]="'services.point-3' | translate"></li>
                 </itd-bullet-list>
                 <itd-bullet-list shade="light-gold" class="ml-32">
-                    <li [innerHTML]="'why-us.point-6' | translate"></li>
-                    <li [innerHTML]="'why-us.point-7' | translate"></li>
-                    <li [innerHTML]="'why-us.point-8' | translate"></li>
-                    <li [innerHTML]="'why-us.point-9' | translate"></li>
+                    <li [innerHTML]="'services.point-4' | translate"></li>
+                    <li [innerHTML]="'services.point-5' | translate"></li>
+                    <li [innerHTML]="'services.point-6' | translate"></li>
                 </itd-bullet-list>
             </div>
+            <h3 class="text-xl underline font-orbitron text-gold cursor-pointer" routerLink="/our-stack" translate>
+                our-stack.title
+            </h3>
         </itd-card-component>
     </itd-standard-section-layout>
     <itd-standard-section-layout [id]="Path.PLANNING" class="border-b-2 border-gold shadow-md">
@@ -38,63 +41,45 @@
             </div>
         </itd-card-component>
     </itd-standard-section-layout>
-    <itd-standard-section-layout [id]="Path.OUR_STACK">
-        <itd-card-component [title]="'our-stack.title' | translate" shade="light-gold">
-            <itd-bullet-list shade="light-gold">
-                <li translate>our-stack.point-1</li>
-                <li translate>our-stack.point-2</li>
-            </itd-bullet-list>
-            <br>
-            <h3 class="font-orbitron text-xl text-gold" translate>our-stack.services.title</h3>
-            <p translate>our-stack.services.description</p>
-            <br>
-            <h3 class="font-orbitron text-xl text-gold" translate>our-stack.tools.title</h3>
-            <p translate>our-stack.tools.description</p>
-            <br>
-            <itd-bullet-list shade="light-gold">
-                <li [innerHTML]="'our-stack.point-3' | translate"></li>
-            </itd-bullet-list>
-        </itd-card-component>
-    </itd-standard-section-layout>
     <itd-standard-section-layout [id]="Path.REFERENCES">
-        <itd-card-component [title]="'references.title' | translate" shade="gold">
+        <itd-card-component [title]="'references.title' | translate" shade="light-gold">
             <div class="mb-4">
-                <itd-bullet-list shade="gold">
+                <itd-bullet-list shade="light-gold">
                     <li [innerHTML]="'references.point-1' | translate"></li>
                 </itd-bullet-list>
             </div>
 
             <div class="flex flex-row mb-8">
-                <h3 class="flex-1 text-xl font-orbitron text-white dark:text-light-gold" translate>
+                <h3 class="flex-1 text-xl font-orbitron text-gold" translate>
                     references.current.title</h3>
                 <ul class="flex-[3] list-disc text-base">
                     <li><p [routerLink]="[Path.REFERENCES + '/' + Path.CONTRACTOR]">
-                        <span class="border-b dark:border-gold cursor-pointer"
+                        <span class="border-b border-itd-black dark:border-gold cursor-pointer"
                               translate>references.current.contractor</span><img class="inline ml-2"
                                                                                  src="assets/images/swiss-logo.svg"></p>
                     </li>
                     <li><p translate [routerLink]="[Path.REFERENCES + '/' + Path.HAPPY_POST]">
-                        <span class="border-b dark:border-gold cursor-pointer"
+                        <span class="border-b border-itd-black dark:border-gold cursor-pointer"
                               translate>references.current.happy-post</span><img class="inline ml-2"
                                                                                  src="assets/images/happypost-logo.svg">
                     </p></li>
                     <li><p translate [routerLink]="[Path.REFERENCES + '/' + Path.SAF_TIMER]">
-                        <span class="border-b dark:border-gold cursor-pointer"
+                        <span class="border-b border-itd-black dark:border-gold cursor-pointer"
                               translate>references.current.saf-timer</span></p></li>
                     <li><p translate [routerLink]="[Path.REFERENCES + '/' + Path.YACHT_PARTNER]">
-                        <span class="border-b dark:border-gold cursor-pointer" translate>references.current.yp</span>
+                        <span class="border-b border-itd-black dark:border-gold cursor-pointer" translate>references.current.yp</span>
                     </p></li>
                 </ul>
             </div>
 
 
             <div class="flex flex-row">
-                <h3 class="flex-1 text-xl font-orbitron text-white dark:text-light-gold" translate>
+                <h3 class="flex-1 text-xl font-orbitron text-gold" translate>
                     references.realized.title</h3>
                 <ul class="flex-[3] list-disc text-base">
                     <li>
                         <p [routerLink]="[Path.REFERENCES + '/' + Path.IT_DOBLER]">
-                            <span class="border-b dark:border-gold cursor-pointer" translate>references.realized.it-dobler</span>
+                            <span class="border-b border-itd-black dark:border-gold cursor-pointer" translate>references.realized.it-dobler</span>
                             <img class="inline ml-2 h-[20px]"
                                  [src]="'assets/images/' + themeSig() + '-mode/logo-plain.svg'">
                         </p>
@@ -102,13 +87,13 @@
                     <li>
                         <p [routerLink]="[Path.REFERENCES + '/' + Path.HALMA]">
                             <span translate
-                                  class="border-b dark:border-gold cursor-pointer">references.realized.halma</span>
+                                  class="border-b border-itd-black dark:border-gold cursor-pointer">references.realized.halma</span>
                             <img class="inline ml-2" [src]="'assets/images/' + themeSig() + '-mode/halma-logo.svg'">
                         </p>
                     </li>
                     <li>
                         <p [routerLink]="[Path.REFERENCES + '/' + Path.WEBSITES]" translate>
-                            <span class="border-b dark:border-gold cursor-pointer" translate>
+                            <span class="border-b border-itd-black dark:border-gold cursor-pointer" translate>
                                 references.realized.websites
                             </span>
                         </p>
@@ -117,24 +102,24 @@
             </div>
         </itd-card-component>
     </itd-standard-section-layout>
-    <itd-standard-section-layout [id]="Path.COMPANY">
-        <itd-card-component [title]="'company.title' | translate" shade="light-gold" class="[&>div>h2]:mb-6">
-            <h3 class="text-center text-itd-black dark:text-light-gold text-2xl">Yanic Dobler</h3>
-            <h4 class="text-center text-itd-black dark:text-light-gold text"><span translate>company.founder</span>&nbsp;
-                <span class="text-gold text-base">IT-Dobler</span></h4>
-            <div class="flex justify-center items-end mb-8">
-                <div class="flex-1 flex-grow"></div>
-                <div>
-                    <img src="assets/images/foto-yanic.svg">
-                </div>
-                <div class="flex-1 flex-grow">
-                    <div class="dark:text-gold ml-4">
-                        <p class="text-xs" [innerHTML]="'company.education-1' | translate"></p>
-                        <p class="text-[10px]" [innerHTML]="'company.education-2' | translate"></p>
-                    </div>
-                </div>
+    <itd-standard-section-layout [id]="Path.ABOUT_US">
+        <itd-card-component [title]="'about-us.title' | translate">
+            <h3 class="mb-8 text-xl font-orbitron text-white dark:text-gold" translate>about-us.why-it-dobler</h3>
+            <div class="flex mb-12">
+                <itd-bullet-list shade="gold">
+                    <li [innerHTML]="'about-us.point-1' | translate"></li>
+                    <li [innerHTML]="'about-us.point-2' | translate"></li>
+                    <li [innerHTML]="'about-us.point-3' | translate"></li>
+                </itd-bullet-list>
+                <itd-bullet-list shade="gold" class="ml-32">
+                    <li [innerHTML]="'about-us.point-4' | translate"></li>
+                    <li [innerHTML]="'about-us.point-5' | translate"></li>
+                    <li [innerHTML]="'about-us.point-6' | translate"></li>
+                    <li [innerHTML]="'about-us.point-7' | translate"></li>
+                </itd-bullet-list>
             </div>
-            <p [innerHTML]="'company.description' | translate"></p>
+            <h3 class="mb-8 text-xl underline cursor-pointer font-orbitron text-white dark:text-gold" routerLink="/team"
+                translate>team.title</h3>
         </itd-card-component>
     </itd-standard-section-layout>
     <itd-standard-section-layout [id]="Path.CONTACT" class="[&>section]:border-none">

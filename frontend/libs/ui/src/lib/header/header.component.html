@@ -6,15 +6,30 @@
             </a>
         </div>
         <ul class="flex justify-around items-center font-light text-base text-gold font-orbitron">
-            <li class="p-5"><a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer" (click)="scrollTo(Path.WHY_US)" translate>menu.why-us</a></li>
-            <li class="p-5"><a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer" (click)="scrollTo(Path.PLANNING)" translate>menu.planning</a></li>
-            <li class="p-5"><a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer" (click)="scrollTo(Path.OUR_STACK)" translate>menu.our-stack</a></li>
-            <li class="p-5"><a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer" (click)="scrollTo(Path.REFERENCES)" translate>menu.references</a></li>
-            <li class="p-5"><a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer" (click)="scrollTo(Path.COMPANY)" translate>menu.company</a></li>
-            <li class="p-5"><a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer" (click)="scrollTo(Path.CONTACT)" translate>menu.contact</a></li>
-            <li><itd-linkedin-svg class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer" (click)="openLinedIn()"></itd-linkedin-svg></li>
-            <li class="p-5"><itd-language-select></itd-language-select></li>
-            <li><itd-theme-select></itd-theme-select></li>
+            <li class="p-5"><a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer" routerLink="/"
+                               [fragment]="Path.SERVICES" translate>menu.services</a></li>
+            <li class="p-5"><a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer" routerLink="/"
+                               [fragment]="Path.PLANNING" translate>menu.planning</a>
+            </li>
+            <li class="p-5"><a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer" routerLink="/"
+                               [fragment]="Path.REFERENCES" translate>menu.references</a>
+            </li>
+            <li class="p-5"><a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer" routerLink="/"
+                               [fragment]="Path.ABOUT_US" translate>menu.about-us</a>
+            </li>
+            <li class="p-5"><a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer" routerLink="/"
+                               [fragment]="Path.CONTACT" translate>menu.contact</a>
+            </li>
+            <li>
+                <itd-linkedin-svg class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer"
+                                  (click)="openLinedIn()"></itd-linkedin-svg>
+            </li>
+            <li class="p-5">
+                <itd-language-select></itd-language-select>
+            </li>
+            <li>
+                <itd-theme-select></itd-theme-select>
+            </li>
         </ul>
 
     </div>
