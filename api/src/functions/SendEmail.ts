@@ -8,16 +8,17 @@ export async function SendEmail(request: HttpRequest, context: InvocationContext
 
     sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
-    sgMail.send({
+    const response = await sgMail.send({
         from: 'dobler.it@gmail.com',
         to: 'dobler.it@gmail.com',
         subject: 'Sending with SendGrid is Fun',
         text: 'and easy to do anywhere, even with Node.js',
         html: '<strong>and easy to do anywhere, even with Node.js</strong>',
-    }).then((response) => console.log(response)).catch((error) => console.error(error));
+    })
 
+    console.log(response);
 
-    return { body: `Hello, ${name}! 2` };
+    return { body: `Hello, ${name}! Heres the SendGrid response: ${JSON.stringify(response)}` };
 };
 
 app.http('SendEmail', {
