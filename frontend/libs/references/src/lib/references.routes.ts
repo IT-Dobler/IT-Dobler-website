@@ -15,12 +15,12 @@ export const referencesRoutes: Route[] = [
     children: [
       {
         path: Path.CONTRACTOR,
-        title: 'Contractor',  // TODO Translate
+        title: 'references.contractor.browser-title',
         component: ContractorPageComponent
       },
       {
         path: Path.HAPPY_POST,
-        title: 'Happy Post',  // TODO Translate
+        title: 'references.happy-post.browser-title',
         component: HappyPostPageComponent
       },
       {
@@ -30,22 +30,22 @@ export const referencesRoutes: Route[] = [
       },
       {
         path: Path.YACHT_PARTNER,
-        title: 'Yacht Partner',  // TODO Translate
+        title: 'references.yp.browser-title',
         component: YpPageComponent
       },
       {
         path: Path.HALMA,
-        title: 'Halma42',  // TODO Translate
+        title: 'references.halma.browser-title',
         component: HalmaPageComponent
       },
       {
         path: Path.IT_DOBLER,
-        title: 'It Dobler',  // TODO Translate
+        title: 'references.it-dobler.browser-title',
         component: ItDoblerPageComponent
       },
       {
         path: Path.WEBSITES,
-        title: 'Websites',  // TODO Translate
+        title: 'references.websites.browser-title',
         component: WebsitesPageComponent
       },
       {

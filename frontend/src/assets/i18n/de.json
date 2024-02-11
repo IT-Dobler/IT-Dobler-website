@@ -1,4 +1,6 @@
 {
+  "app.name": "IT-Dobler",
+  "app.browser-title": "Wir machen digitalisierung sichtbar",
   "menu.services": "Services",
   "menu.services.what-we-do": "Was wir tun",
   "menu.services.our-stack": "Unser Stack",

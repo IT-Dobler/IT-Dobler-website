@@ -6,6 +6,7 @@ export const appRoutes: Route[] = [
   {
     path: '',
     component: HomePageComponent,
+    title: 'app.browser-title',
     pathMatch: 'full'
   },
   {

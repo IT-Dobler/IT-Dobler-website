@@ -7,7 +7,7 @@ import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {provideStore, provideState, Store} from '@ngrx/store';
 import {provideEffects} from '@ngrx/effects';
 import {provideRouterStore, routerReducer} from "@ngrx/router-store";
-import {SettingsApiEvents, settingsEffects} from "@frontend/shared-angular";
+import {provideI18nTitleStrategy, SettingsApiEvents, settingsEffects} from "@frontend/shared-angular";
 import {settingsFeature} from "@frontend/shared-angular";
 import {provideStoreDevtools} from "@ngrx/store-devtools";
 import {provideAnimations, provideNoopAnimations} from "@angular/platform-browser/animations";
@@ -25,9 +25,7 @@ export const appConfig: ApplicationConfig = {
   providers: [
     !disableAnimations ? provideAnimations() : provideNoopAnimations(),
     provideRouter(appRoutes,
-        withRouterConfig({
-
-        }),
+        withRouterConfig({}),
         withInMemoryScrolling({
           anchorScrolling: 'enabled',
           scrollPositionRestoration: 'enabled'
@@ -45,6 +43,7 @@ export const appConfig: ApplicationConfig = {
 
     provideStoreDevtools(),
 
+    provideI18nTitleStrategy(),
 
     importProvidersFrom(HttpClientModule),
     importProvidersFrom(
