@@ -6,7 +6,7 @@ export async function SendEmail(request: HttpRequest, context: InvocationContext
 
     const name = request.query.get('name') || await request.text() || 'world';
 
-    sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+    // sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
     const response = await sgMail.send({
         from: 'dobler.it@gmail.com',
@@ -18,7 +18,7 @@ export async function SendEmail(request: HttpRequest, context: InvocationContext
 
     console.log(response);
 
-    return { body: `Hello, ${name}! Heres the SendGrid response: ${JSON.stringify(response)}` };
+    return { body: `Hello, ${name}!` };
 }
 
 app.http('SendEmail', {
