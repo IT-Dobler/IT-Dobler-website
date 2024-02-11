@@ -1,5 +1,5 @@
 import { app, HttpRequest, HttpResponseInit, InvocationContext } from "@azure/functions";
-import * as sgMail from '@sendgrid/mail';
+import { send } from '@sendgrid/mail';
 
 export async function SendEmail(request: HttpRequest, context: InvocationContext): Promise<HttpResponseInit> {
     context.log(`Http function processed request for url "${request.url}"`);
@@ -8,7 +8,7 @@ export async function SendEmail(request: HttpRequest, context: InvocationContext
 
     // sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
-    const response = await sgMail.send({
+    const response = await send({
         from: 'dobler.it@gmail.com',
         to: 'dobler.it@gmail.com',
         subject: 'Sending with SendGrid is Fun',
@@ -16,7 +16,7 @@ export async function SendEmail(request: HttpRequest, context: InvocationContext
         html: '<strong>and easy to do anywhere, even with Node.js</strong>',
     })
 
-    console.log(response);
+    context.log(response);
 
     return { body: `Hello, ${name}!` };
 }
