@@ -1,5 +1,5 @@
 import { app, HttpRequest, HttpResponseInit, InvocationContext } from "@azure/functions";
-const sgMail = require('@sendgrid/mail')
+import sgMail = require('@sendgrid/mail');
 export async function SendEmail(request: HttpRequest, context: InvocationContext): Promise<HttpResponseInit> {
     context.log(`Http function processed request for url "${request.url}"`);
 
