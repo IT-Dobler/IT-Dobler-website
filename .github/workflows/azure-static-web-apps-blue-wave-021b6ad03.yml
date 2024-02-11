@@ -16,8 +16,8 @@ jobs:
     name: Build and Deploy Job
     env:
       GITHUB_TOKEN: ${{ secrets.MY_GITHUB_ACTION_TOKEN }}
-      SENDGRID_API_KEY : ${{ secrets.SENDGRID_API_KEY }}
     steps:
+      - run: echo "$GITHUB_TOKEN"
       - uses: actions/checkout@v3
         with:
           submodules: true
