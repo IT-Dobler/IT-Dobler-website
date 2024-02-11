@@ -10,15 +10,20 @@ import {provideRouterStore, routerReducer} from "@ngrx/router-store";
 import {SettingsApiEvents, settingsEffects} from "@frontend/shared-angular";
 import {settingsFeature} from "@frontend/shared-angular";
 import {provideStoreDevtools} from "@ngrx/store-devtools";
+import {provideAnimations, provideNoopAnimations} from "@angular/platform-browser/animations";
 
 // AoT requires an exported function for factories
 export function httpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
+const disableAnimations: boolean = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+).matches;
+
 export const appConfig: ApplicationConfig = {
   providers: [
-
+    !disableAnimations ? provideAnimations() : provideNoopAnimations(),
     provideRouter(appRoutes,
         withRouterConfig({
 

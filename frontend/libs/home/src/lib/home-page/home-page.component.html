@@ -1,19 +1,19 @@
 <itd-single-col-page-layout>
-    <section class="flex justify-center pt-28 pb-12 border-b-2 border-gold shadow-md">
+    <section class="flex justify-center pt-14 pb-14 px-8 border-b-2 border-gold shadow-md">
         <itd-language-and-theme-aware-image imageName="logo-landing-page"></itd-language-and-theme-aware-image>
     </section>
     <itd-standard-section-layout [id]="Path.SERVICES">
         <itd-card-component [title]="'services.title' | translate" shade="light-gold">
-            <h3 class="mb-8 text-xl font-orbitron text-gold" translate>
+            <h3 class="mb-4 xl:mb-8 text-xl font-orbitron text-gold" translate>
                 services.what-we-do
             </h3>
-            <div class="flex mb-12">
+            <div class="flex flex-wrap lg:flex-nowrap xl:mb-12">
                 <itd-bullet-list shade="light-gold">
                     <li [innerHTML]="'services.point-1' | translate"></li>
                     <li [innerHTML]="'services.point-2' | translate"></li>
                     <li [innerHTML]="'services.point-3' | translate"></li>
                 </itd-bullet-list>
-                <itd-bullet-list shade="light-gold" class="ml-32">
+                <itd-bullet-list shade="light-gold" class="lg:ml-32">
                     <li [innerHTML]="'services.point-4' | translate"></li>
                     <li [innerHTML]="'services.point-5' | translate"></li>
                     <li [innerHTML]="'services.point-6' | translate"></li>
@@ -26,13 +26,13 @@
     </itd-standard-section-layout>
     <itd-standard-section-layout [id]="Path.PLANNING" class="border-b-2 border-gold shadow-md">
         <itd-card-component [title]="'project-planning.title' | translate" shade="gold">
-            <div class="flex mb-12">
+            <div class="flex flex-wrap lg:flex-nowrap xl:mb-12">
                 <itd-bullet-list shade="gold">
                     <li [innerHTML]="'project-planning.point-1' | translate"></li>
                     <li [innerHTML]="'project-planning.point-2' | translate"></li>
                     <li [innerHTML]="'project-planning.point-3' | translate"></li>
                 </itd-bullet-list>
-                <itd-bullet-list shade="gold" class="ml-32">
+                <itd-bullet-list shade="gold" class="lg:ml-32">
                     <li [innerHTML]="'project-planning.point-4' | translate"></li>
                     <li [innerHTML]="'project-planning.point-5' | translate"></li>
                     <li [innerHTML]="'project-planning.point-6' | translate"></li>
@@ -49,51 +49,52 @@
                 </itd-bullet-list>
             </div>
 
-            <div class="flex flex-row mb-8">
-                <h3 class="flex-1 text-xl font-orbitron text-gold" translate>
+            <div class="flex flex-col md:flex-row md:flex-nowrap mb-8">
+                <h3 class="flex-1 text-xl font-orbitron text-gold mb-2" translate>
                     references.current.title</h3>
                 <ul class="flex-[3] list-disc text-base">
-                    <li><p [routerLink]="[Path.REFERENCES + '/' + Path.CONTRACTOR]">
-                        <span class="border-b border-itd-black dark:border-gold cursor-pointer"
+                    <li class="mb-2"><p [routerLink]="[Path.REFERENCES + '/' + Path.CONTRACTOR]">
+                        <span class="border-b border-itd-black dark:border-light-gold cursor-pointer"
                               translate>references.current.contractor</span><img class="inline ml-2"
                                                                                  src="assets/images/swiss-logo.svg"></p>
                     </li>
-                    <li><p translate [routerLink]="[Path.REFERENCES + '/' + Path.HAPPY_POST]">
-                        <span class="border-b border-itd-black dark:border-gold cursor-pointer"
+                    <li class="mb-2"><p translate [routerLink]="[Path.REFERENCES + '/' + Path.HAPPY_POST]">
+                        <span class="border-b border-itd-black dark:border-light-gold cursor-pointer"
                               translate>references.current.happy-post</span><img class="inline ml-2"
                                                                                  src="assets/images/happypost-logo.svg">
                     </p></li>
-                    <li><p translate [routerLink]="[Path.REFERENCES + '/' + Path.SAF_TIMER]">
-                        <span class="border-b border-itd-black dark:border-gold cursor-pointer"
-                              translate>references.current.saf-timer</span></p></li>
-                    <li><p translate [routerLink]="[Path.REFERENCES + '/' + Path.YACHT_PARTNER]">
-                        <span class="border-b border-itd-black dark:border-gold cursor-pointer" translate>references.current.yp</span>
+                    <!-- TODO Comment in once the project is ready  -->
+                    <!--                    <li><p translate [routerLink]="[Path.REFERENCES + '/' + Path.SAF_TIMER]">-->
+                    <!--                        <span class="border-b border-itd-black dark:border-gold cursor-pointer"-->
+                    <!--                              translate>references.current.saf-timer</span></p></li>-->
+                    <li class="mb-2"><p translate [routerLink]="[Path.REFERENCES + '/' + Path.YACHT_PARTNER]">
+                        <span class="border-b border-itd-black dark:border-light-gold cursor-pointer" translate>references.current.yp</span>
                     </p></li>
                 </ul>
             </div>
 
 
-            <div class="flex flex-row">
-                <h3 class="flex-1 text-xl font-orbitron text-gold" translate>
+            <div class="flex flex-col md:flex-row md:flex-nowrap">
+                <h3 class="flex-1 text-xl font-orbitron text-gold mb-2" translate>
                     references.realized.title</h3>
                 <ul class="flex-[3] list-disc text-base">
-                    <li>
+                    <li class="mb-2">
                         <p [routerLink]="[Path.REFERENCES + '/' + Path.IT_DOBLER]">
-                            <span class="border-b border-itd-black dark:border-gold cursor-pointer" translate>references.realized.it-dobler</span>
+                            <span class="border-b border-itd-black dark:border-light-gold cursor-pointer" translate>references.realized.it-dobler</span>
                             <img class="inline ml-2 h-[20px]"
                                  [src]="'assets/images/' + themeSig() + '-mode/logo-plain.svg'">
                         </p>
                     </li>
-                    <li>
+                    <li class="mb-2">
                         <p [routerLink]="[Path.REFERENCES + '/' + Path.HALMA]">
                             <span translate
-                                  class="border-b border-itd-black dark:border-gold cursor-pointer">references.realized.halma</span>
+                                  class="border-b border-itd-black dark:border-light-gold cursor-pointer">references.realized.halma</span>
                             <img class="inline ml-2" [src]="'assets/images/' + themeSig() + '-mode/halma-logo.svg'">
                         </p>
                     </li>
-                    <li>
+                    <li class="mb-2">
                         <p [routerLink]="[Path.REFERENCES + '/' + Path.WEBSITES]" translate>
-                            <span class="border-b border-itd-black dark:border-gold cursor-pointer" translate>
+                            <span class="border-b border-itd-black dark:border-light-gold cursor-pointer" translate>
                                 references.realized.websites
                             </span>
                         </p>
@@ -104,27 +105,29 @@
     </itd-standard-section-layout>
     <itd-standard-section-layout [id]="Path.ABOUT_US">
         <itd-card-component [title]="'about-us.title' | translate">
-            <h3 class="mb-8 text-xl font-orbitron text-white dark:text-gold" translate>about-us.why-it-dobler</h3>
-            <div class="flex mb-12">
+            <h3 class="mb-4 xl:mb-8 text-xl font-orbitron text-white dark:text-gold" translate>
+                about-us.why-it-dobler</h3>
+            <div class="flex flex-wrap lg:flex-nowrap xl:mb-12">
                 <itd-bullet-list shade="gold">
                     <li [innerHTML]="'about-us.point-1' | translate"></li>
                     <li [innerHTML]="'about-us.point-2' | translate"></li>
                     <li [innerHTML]="'about-us.point-3' | translate"></li>
                 </itd-bullet-list>
-                <itd-bullet-list shade="gold" class="ml-32">
+                <itd-bullet-list shade="gold" class="lg:ml-32">
                     <li [innerHTML]="'about-us.point-4' | translate"></li>
                     <li [innerHTML]="'about-us.point-5' | translate"></li>
                     <li [innerHTML]="'about-us.point-6' | translate"></li>
                     <li [innerHTML]="'about-us.point-7' | translate"></li>
                 </itd-bullet-list>
             </div>
-            <h3 class="mb-8 text-xl underline cursor-pointer font-orbitron text-white dark:text-gold" routerLink="/team"
+            <h3 class="xl:mb-8 text-xl underline cursor-pointer font-orbitron text-white dark:text-gold"
+                routerLink="/team"
                 translate>team.title</h3>
         </itd-card-component>
     </itd-standard-section-layout>
     <itd-standard-section-layout [id]="Path.CONTACT" class="[&>section]:border-none">
-        <h2 class="text-2xl text-center font-orbitron mb-12 text-gold" translate>contact.title</h2>
-        <div class="flex flex-row items-center">
+        <h2 class="text-2xl text-center font-orbitron mb-8 text-gold" translate>contact.title</h2>
+        <div class="flex flex-col lg:flex-row lg:items-center mx-4">
             <!-- The form could benefit from some refactoring, however the initial investment is very high -->
             <form class="flex-1 flex-grow" [formGroup]="form" (ngSubmit)="submit()">
                 <p class="mb-4 font-orbitron text-sm" translate>contact.intro</p>
@@ -161,18 +164,17 @@
                               [formControl]="control"
                               class="block p-2.5 mt-2 w-full text-sm text-itd-black bg-light-gold focus-visible:outline-none"></textarea>
                 </div>
-                <div class="float-end">
+                <div class="text-center xl:text-end">
                     <button type="submit"
-                            class="text-white dark:text-itd-black bg-gold hover:bg-light-gold focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-10 py-2.5 text-center mb-2 dark:bg-gold dark:hover:bg-light-gold dark:focus:ring-blue-800"
+                            class="text-2xl font-normal text-white dark:text-itd-black bg-gold hover:bg-light-gold rounded-full px-12 py-2 text-center mb-2 dark:bg-gold dark:hover:bg-light-gold"
                             translate>
                         contact.form.send
                     </button>
                 </div>
             </form>
-            <div class="w-16"></div>
-            <div class="flex-1 flex-grow">
-                <img src="assets/images/dark-mode/logo-plain.svg" alt="IT-Dobler logo">
-                <h2 class="mt-2 font-orbitron text-2xl">IT-Dobler</h2>
+            <div class="flex-1 flex-grow lg:ml-16">
+                <h2 class="mt-2 font-orbitron text-2xl"><img class="inline lg:block h-5 lg:h-12 align-baseline mr-1 lg:mb-1" src="assets/images/dark-mode/logo-plain.svg"
+                                                             alt="IT-Dobler logo">IT-Dobler</h2>
                 <p translate>contact.address.switzerland</p>
                 <p>
                     <span translate>contact.address.mobile</span>

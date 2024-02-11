@@ -1,36 +1,126 @@
-<nav class="flex justify-center border-b-2 border-b-gold bg-white dark:bg-itd-black drop-shadow-md">
-    <div class="flex justify-between w-8/12">
-        <div class="p-3 h-[100px] flex-shrink-0">
-            <a routerLink="/">
-                <itd-language-and-theme-aware-image imageName="logo"></itd-language-and-theme-aware-image>
-            </a>
+<nav class="border-b-2 border-b-gold bg-white dark:bg-itd-black drop-shadow-md font-light text-lg text-gold font-orbitron">
+
+    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+        <div class="relative flex h-[100px] items-center justify-between">
+            <div class="flex flex-1 items-center justify-between lg:items-stretch lg:justify-center">
+                <div class="flex flex-shrink-0 items-center">
+                    <a class="">
+                        <itd-language-and-theme-aware-image imageName="logo"></itd-language-and-theme-aware-image>
+                    </a>
+                </div>
+                <div class="hidden lg:ml-6 lg:block">
+                    <div class="flex lg:items-center space-x-4">
+                        <ng-container [ngTemplateOutlet]="mainNavContent"></ng-container>
+                        <div class="flex justify-around items-center">
+                            <itd-linkedin-svg class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer"
+                                              (click)="openLinedIn()"></itd-linkedin-svg>
+                            <itd-language-select></itd-language-select>
+                            <itd-theme-select></itd-theme-select>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute inset-y-0 right-0 flex items-center lg:hidden">
+                    <!-- Mobile menu button-->
+                    <button (click)="toggleNavBar()" type="button"
+                            class="relative inline-flex items-center justify-center rounded-md p-2"
+                            aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="absolute -inset-0.5"></span>
+                        <span class="sr-only">Open main menu</span>
+                        <svg *ngIf="!showMenu" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                             stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+                        </svg>
+                        <svg *ngIf="showMenu" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                             stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
         </div>
-        <ul class="flex justify-around items-center font-light text-base text-gold font-orbitron">
-            <li class="p-5"><a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer" routerLink="/"
-                               [fragment]="Path.SERVICES" translate>menu.services</a></li>
-            <li class="p-5"><a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer" routerLink="/"
-                               [fragment]="Path.PLANNING" translate>menu.planning</a>
-            </li>
-            <li class="p-5"><a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer" routerLink="/"
-                               [fragment]="Path.REFERENCES" translate>menu.references</a>
-            </li>
-            <li class="p-5"><a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer" routerLink="/"
-                               [fragment]="Path.ABOUT_US" translate>menu.about-us</a>
-            </li>
-            <li class="p-5"><a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer" routerLink="/"
-                               [fragment]="Path.CONTACT" translate>menu.contact</a>
-            </li>
-            <li>
+    </div>
+
+    <!-- Mobile menu, show/hide based on menu state. -->
+    <div *ngIf="showMenu" class="lg:hidden">
+        <div class="space-y-1 px-2 pb-3 pt-2">
+            <ng-container [ngTemplateOutlet]="mainNavContent"></ng-container>
+            <div class="flex justify-around">
                 <itd-linkedin-svg class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer"
                                   (click)="openLinedIn()"></itd-linkedin-svg>
-            </li>
-            <li class="p-5">
                 <itd-language-select></itd-language-select>
-            </li>
-            <li>
                 <itd-theme-select></itd-theme-select>
-            </li>
-        </ul>
-
+            </div>
+        </div>
     </div>
 </nav>
+
+<ng-template #mainNavContent>
+    <ul class="flex flex-col lg:flex-row">
+        <li class="group py-5 px-3 group/sub-menu">
+            <div class="flex justify-between" (click)="toggleServices()">
+                <a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer" routerLink="/"
+                   [fragment]="Path.SERVICES" translate>menu.services</a>
+                <span class="lg:hidden">+</span>
+            </div>
+
+            <itd-sub-menu-dropdown [showSubMenu]="showServices">
+                <li class="p-5"><a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer" translate>
+                    menu.services.what-we-do</a>
+                </li>
+                <li class="p-5"><a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer" translate>
+                    menu.services.our-stack</a>
+                </li>
+            </itd-sub-menu-dropdown>
+        </li>
+        <li class="py-5 px-3"><a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer" routerLink="/"
+                                 [fragment]="Path.PLANNING" translate>menu.planning</a>
+        </li>
+        <li class="py-5 px-3 group/sub-menu">
+            <div class="flex justify-between" (click)="toggleReferences()">
+                <a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer" routerLink="/"
+                   [fragment]="Path.REFERENCES" translate>menu.references</a>
+                <span class="lg:hidden">+</span>
+            </div>
+
+            <itd-sub-menu-dropdown [showSubMenu]="showReferences">
+                <li class="p-5"><a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer" translate>
+                    menu.references.contractor</a>
+                </li>
+                <li class="p-5"><a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer" translate>
+                    menu.references.happy-post</a>
+                </li>
+                <li class="p-5"><a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer" translate>
+                    menu.references.yachtpartner</a>
+                </li>
+                <li class="p-5"><a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer" translate>
+                    menu.references.halma-42</a>
+                </li>
+                <li class="p-5"><a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer" translate>
+                    menu.references.it-dobler</a>
+                </li>
+                <li class="p-5"><a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer" translate>
+                    menu.references.websites</a>
+                </li>
+            </itd-sub-menu-dropdown>
+        </li>
+        <li class="py-5 px-3 group/sub-menu">
+            <div class="flex justify-between" (click)="toggleAboutUs()">
+                <a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer" routerLink="/"
+                   [fragment]="Path.ABOUT_US" translate>menu.about-us</a>
+                <span class="lg:hidden">+</span>
+            </div>
+            <itd-sub-menu-dropdown [showSubMenu]="showAboutUs">
+                <li class="p-5"><a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer" translate>
+                    menu.about-us.why-it-dobler</a>
+                </li>
+                <li class="p-5"><a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer" translate>
+                    menu.about-us.team</a>
+                </li>
+            </itd-sub-menu-dropdown>
+        </li>
+        <li class="py-5 px-3"><a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer" routerLink="/"
+                                 [fragment]="Path.CONTACT" translate>menu.contact</a>
+        </li>
+    </ul>
+</ng-template>

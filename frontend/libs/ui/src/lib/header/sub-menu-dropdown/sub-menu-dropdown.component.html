@@ -1,0 +1,8 @@
+<ul [@openClose]="mobileAnimationsDisabled ? 'disabled' : showSubMenu ? 'open' : 'closed'"
+    class="overflow-hidden bg-white dark:bg-itd-black
+                    lg:transition-all lg:ease-in lg:delay-200
+                    lg:flex lg:justify-center lg:items-center lg:fixed lg:invisible lg:h-0 lg:opacity-0 lg:top-[102px] lg:left-0 lg:w-full
+                    group-hover/sub-menu:lg:h-[50px] group-hover/sub-menu:lg:opacity-100 group-hover/sub-menu:lg:visible
+                    group-hover/sub-menu:lg:border-b group-hover/sub-menu:lg:border-gold">
+    <ng-content></ng-content>
+</ul>

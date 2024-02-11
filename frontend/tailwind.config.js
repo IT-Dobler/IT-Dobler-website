@@ -15,12 +15,6 @@ module.exports = {
                 'gold': '#DCA54C',
                 'light-gold': '#F5E4C9',
             },
-            backgroundImage: {
-                'dark-card-border-gold': 'url("/assets/images/dark-mode/card-border-gold.svg")',
-                'dark-card-border-light-gold': 'url("/assets/images/dark-mode/card-border-light-gold.svg")',
-                'light-card-border-light-gold': 'url("/assets/images/light-mode/card-border-light-gold.svg")',
-                'light-card-border-gold': 'url("/assets/images/light-mode/card-border-gold.svg")',
-            },
             fontFamily: {
                 'orbitron': ['Orbitron', 'sans-serif'],
                 'roboto': ['Roboto', 'sans-serif'],

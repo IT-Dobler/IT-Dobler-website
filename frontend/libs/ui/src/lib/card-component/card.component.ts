@@ -16,9 +16,9 @@ export class CardComponent {
   public getBackgroundClass(): string {
     // Defined in tailwind.config.js under backgroundImage
     if (this.shade === 'light-gold') {
-      return 'bg-light-card-border-light-gold dark:bg-dark-card-border-light-gold'
+      return 'bg-light-gold dark:bg-transparent dark:border-[6px] dark:border-light-gold rounded-tl-[3rem] lg:rounded-tl-[5rem] rounded-br-[8rem] lg:rounded-br-[13rem]';
     } else {
-      return 'bg-light-card-border-gold dark:bg-dark-card-border-gold'
+      return 'bg-gold dark:bg-transparent dark:border-[6px] dark:border-gold rounded-tl-[3rem] lg:rounded-tl-[5rem] rounded-br-[8rem] lg:rounded-br-[13rem]';
     }
   }
 }
