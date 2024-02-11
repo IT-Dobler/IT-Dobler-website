@@ -17,7 +17,7 @@ export async function SendEmail(request: HttpRequest, context: InvocationContext
     // })
 
     return { body: `Hello, ${name}!` };
-}
+};
 
 app.http('SendEmail', {
     methods: ['GET', 'POST'],
