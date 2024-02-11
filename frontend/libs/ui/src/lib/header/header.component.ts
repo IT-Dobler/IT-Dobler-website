@@ -10,13 +10,14 @@ import {TranslateModule} from "@ngx-translate/core";
 import {ThemeSelectComponent} from "./theme-select/theme-select.component";
 import {LinkedinSvgComponent} from "../linkedin-svg/linkedin-svg.component";
 import {SubMenuDropdownComponent} from "./sub-menu-dropdown/sub-menu-dropdown.component";
+import {SubMenuToggleIndicatorComponent} from "./sub-menu-toggle-indicator/sub-menu-toggle-indicator.component";
 
 @Component({
   selector: 'itd-header',
   standalone: true,
-  imports: [CommonModule, RouterLink, LanguageSelectComponent, LanguageAndThemeAwareImageComponent, TranslateModule, ThemeSelectComponent, LinkedinSvgComponent, SubMenuDropdownComponent],
+  imports: [CommonModule, RouterLink, LanguageSelectComponent, LanguageAndThemeAwareImageComponent, TranslateModule, ThemeSelectComponent, LinkedinSvgComponent, SubMenuDropdownComponent, SubMenuToggleIndicatorComponent],
   templateUrl: './header.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderComponent {
   public showMenu = false;

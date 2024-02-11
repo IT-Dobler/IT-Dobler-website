@@ -61,15 +61,22 @@
             <div class="flex justify-between" (click)="toggleServices()">
                 <a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer" routerLink="/"
                    [fragment]="Path.SERVICES" translate>menu.services</a>
-                <span class="lg:hidden">+</span>
+
+                <itd-sub-menu-toggle-indicator [subMenuOpen]="showServices"></itd-sub-menu-toggle-indicator>
             </div>
 
             <itd-sub-menu-dropdown [showSubMenu]="showServices">
-                <li class="p-5"><a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer" translate>
-                    menu.services.what-we-do</a>
+                <li class="p-3 lg:p-5">
+                    <a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer" routerLink="/"
+                       [fragment]="Path.SERVICES" translate>
+                        menu.services.what-we-do
+                    </a>
                 </li>
-                <li class="p-5"><a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer" translate>
-                    menu.services.our-stack</a>
+                <li class="p-3 lg:p-5">
+                    <a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer" routerLink="/our-stack"
+                       translate>
+                        menu.services.our-stack
+                    </a>
                 </li>
             </itd-sub-menu-dropdown>
         </li>
@@ -80,27 +87,46 @@
             <div class="flex justify-between" (click)="toggleReferences()">
                 <a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer" routerLink="/"
                    [fragment]="Path.REFERENCES" translate>menu.references</a>
-                <span class="lg:hidden">+</span>
+
+                <itd-sub-menu-toggle-indicator [subMenuOpen]="showReferences"></itd-sub-menu-toggle-indicator>
             </div>
 
             <itd-sub-menu-dropdown [showSubMenu]="showReferences">
-                <li class="p-5"><a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer" translate>
-                    menu.references.contractor</a>
+                <li class="p-3 lg:p-5">
+                    <a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer"
+                       [routerLink]="[Path.REFERENCES + '/' + Path.CONTRACTOR]" translate>
+                        menu.references.contractor
+                    </a>
                 </li>
-                <li class="p-5"><a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer" translate>
-                    menu.references.happy-post</a>
+                <li class="p-3 lg:p-5">
+                    <a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer"
+                       [routerLink]="[Path.REFERENCES + '/' + Path.HAPPY_POST]" translate>
+                        menu.references.happy-post
+                    </a>
                 </li>
-                <li class="p-5"><a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer" translate>
-                    menu.references.yachtpartner</a>
+                <li class="p-3 lg:p-5">
+                    <a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer"
+                       [routerLink]="[Path.REFERENCES + '/' + Path.YACHT_PARTNER]" translate>
+                        menu.references.yachtpartner
+                    </a>
                 </li>
-                <li class="p-5"><a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer" translate>
-                    menu.references.halma-42</a>
+                <li class="p-3 lg:p-5">
+                    <a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer"
+                       [routerLink]="[Path.REFERENCES + '/' + Path.HALMA]" translate>
+                        menu.references.halma-42
+                    </a>
                 </li>
-                <li class="p-5"><a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer" translate>
-                    menu.references.it-dobler</a>
+                <li class="p-3 lg:p-5">
+                    <a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer"
+                       [routerLink]="[Path.REFERENCES + '/' + Path.IT_DOBLER]" translate>
+                        menu.references.it-dobler
+                    </a>
                 </li>
-                <li class="p-5"><a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer" translate>
-                    menu.references.websites</a>
+                <li class="p-3 lg:p-5">
+                    <a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer"
+                       [routerLink]="[Path.REFERENCES + '/' + Path.WEBSITES]" translate>
+                        menu.references.websites
+                    </a>
                 </li>
             </itd-sub-menu-dropdown>
         </li>
@@ -108,19 +134,26 @@
             <div class="flex justify-between" (click)="toggleAboutUs()">
                 <a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer" routerLink="/"
                    [fragment]="Path.ABOUT_US" translate>menu.about-us</a>
-                <span class="lg:hidden">+</span>
+                <itd-sub-menu-toggle-indicator [subMenuOpen]="showAboutUs"></itd-sub-menu-toggle-indicator>
             </div>
             <itd-sub-menu-dropdown [showSubMenu]="showAboutUs">
-                <li class="p-5"><a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer" translate>
-                    menu.about-us.why-it-dobler</a>
+                <li class="p-3 lg:p-5">
+                    <a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer" routerLink="/"
+                       [fragment]="Path.ABOUT_US" translate>
+                        menu.about-us.why-it-dobler
+                    </a>
                 </li>
-                <li class="p-5"><a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer" translate>
-                    menu.about-us.team</a>
+                <li class="p-3 lg:p-5">
+                    <a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer" [routerLink]="Path.TEAM"
+                       translate>
+                        menu.about-us.team
+                    </a>
                 </li>
             </itd-sub-menu-dropdown>
         </li>
-        <li class="py-5 px-3"><a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer" routerLink="/"
-                                 [fragment]="Path.CONTACT" translate>menu.contact</a>
+        <li class="py-5 px-3">
+            <a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer" routerLink="/"
+               [fragment]="Path.CONTACT" translate>menu.contact</a>
         </li>
     </ul>
 </ng-template>

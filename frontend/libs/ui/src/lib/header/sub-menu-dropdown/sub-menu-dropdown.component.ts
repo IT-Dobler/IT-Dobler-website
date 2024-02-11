@@ -16,10 +16,7 @@ import {animate, state, style, transition, trigger} from "@angular/animations";
       state('closed', style({
         height: '0',
       })),
-      transition('open => closed', [
-        animate('0.3s ease-in-out')
-      ]),
-      transition('closed => open', [
+      transition('open <=> closed', [
         animate('0.3s ease-in-out')
       ]),
     ]),

@@ -1,0 +1,14 @@
+<div class="pr-6 lg:hidden">
+    <svg [@spin]="subMenuOpen ? 'default' : 'rotated'"
+         class="h-4 w-4 lg:hidden absolute"
+         fill="none" viewBox="0 0 24 24" stroke-width="3"
+         stroke="currentColor" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M0,12 L24,12 M12,24 L12,0 z z"/>
+    </svg>
+
+    <svg [@spin]="subMenuOpen ? 'rotated' : 'default'" class="h-4 w-4 lg:hidden absolute"
+         fill="none" viewBox="0 0 24 24" stroke-width="3"
+         stroke="currentColor" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M0,12L24,12 z"/>
+    </svg>
+</div>
