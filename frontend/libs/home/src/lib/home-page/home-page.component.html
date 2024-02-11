@@ -19,8 +19,8 @@
                     <li [innerHTML]="'services.point-6' | translate"></li>
                 </itd-bullet-list>
             </div>
-            <h3 class="text-xl underline font-orbitron text-gold cursor-pointer" routerLink="/our-stack" translate>
-                our-stack.title
+            <h3 class="text-xl font-orbitron text-gold cursor-pointer" routerLink="/our-stack">
+                <span class="border-b border-white dark:border-gold" translate>our-stack.title</span>
             </h3>
         </itd-card-component>
     </itd-standard-section-layout>
@@ -120,9 +120,10 @@
                     <li [innerHTML]="'about-us.point-7' | translate"></li>
                 </itd-bullet-list>
             </div>
-            <h3 class="xl:mb-8 text-xl underline cursor-pointer font-orbitron text-white dark:text-gold"
-                routerLink="/team"
-                translate>team.title</h3>
+            <h3 class="xl:mb-8 text-xl cursor-pointer font-orbitron text-white dark:text-gold" routerLink="/team">
+                <span class="border-b border-white dark:border-gold"
+                      translate>team.title</span>
+            </h3>
         </itd-card-component>
     </itd-standard-section-layout>
     <itd-standard-section-layout [id]="Path.CONTACT" class="[&>section]:border-none">
@@ -173,8 +174,10 @@
                 </div>
             </form>
             <div class="flex-1 flex-grow lg:ml-16">
-                <h2 class="mt-2 font-orbitron text-2xl"><img class="inline lg:block h-5 lg:h-12 align-baseline mr-1 lg:mb-1" src="assets/images/dark-mode/logo-plain.svg"
-                                                             alt="IT-Dobler logo">IT-Dobler</h2>
+                <h2 class="mt-2 font-orbitron text-2xl"><img
+                        class="inline lg:block h-5 lg:h-12 align-baseline mr-1 lg:mb-1"
+                        src="assets/images/dark-mode/logo-plain.svg"
+                        alt="IT-Dobler logo">IT-Dobler</h2>
                 <p translate>contact.address.switzerland</p>
                 <p>
                     <span translate>contact.address.mobile</span>

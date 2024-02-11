@@ -25,7 +25,9 @@ export const appConfig: ApplicationConfig = {
   providers: [
     !disableAnimations ? provideAnimations() : provideNoopAnimations(),
     provideRouter(appRoutes,
-        withRouterConfig({}),
+        withRouterConfig({
+          onSameUrlNavigation: 'reload',
+        }),
         withInMemoryScrolling({
           anchorScrolling: 'enabled',
           scrollPositionRestoration: 'enabled'
