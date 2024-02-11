@@ -15,6 +15,7 @@ import {Path, selectTheme} from "@frontend/shared-angular";
 import {FormsModule, NonNullableFormBuilder, ReactiveFormsModule, Validators} from "@angular/forms";
 import {toSignal} from "@angular/core/rxjs-interop";
 import {Store} from "@ngrx/store";
+import {HttpClient} from "@angular/common/http";
 
 @Component({
   selector: 'itd-home',
@@ -28,6 +29,7 @@ export class HomePageComponent {
 
   private store = inject(Store);
   private formBuilder = inject(NonNullableFormBuilder);
+  private httpClient = inject(HttpClient);
 
   themeSig = this.store.selectSignal(selectTheme);
 
@@ -45,6 +47,9 @@ export class HomePageComponent {
 
     if (this.form.valid) {
       console.log(this.form.value);
+      this.httpClient.get('/api/sendemail').subscribe((res) => {
+        console.log(res);
+      })
     }
   }
 }
