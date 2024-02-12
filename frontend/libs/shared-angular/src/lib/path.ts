@@ -15,4 +15,5 @@ export enum Path {
   HALMA = 'halma',
   WEBSITES = 'websites',
   IT_DOBLER = 'it-dobler',
+  IMPRESSUM = 'impressum'
 }

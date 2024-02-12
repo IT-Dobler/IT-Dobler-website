@@ -17,6 +17,7 @@ module.exports = {
                 'itd-black': '#09090B',
                 'gold': '#DCA54C',
                 'light-gold': '#F5E4C9',
+                'light-blue': '#6495ED'
             },
             fontFamily: {
                 'orbitron': ['Orbitron', 'sans-serif'],

@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@frontend/home": ["libs/home/src/index.ts"],
+      "@frontend/impressum": ["libs/impressum/src/index.ts"],
       "@frontend/our-stack": ["libs/our-stack/src/index.ts"],
       "@frontend/references": ["libs/references/src/index.ts"],
       "@frontend/shared-angular": ["libs/shared-angular/src/index.ts"],

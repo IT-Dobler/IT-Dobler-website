@@ -20,5 +20,9 @@ export const appRoutes: Route[] = [
   {
     path: Path.REFERENCES,
     loadChildren: () => import('@frontend/references').then(m => m.referencesRoutes)
+  },
+  {
+    path: Path.IMPRESSUM,
+    loadChildren: () => import('@frontend/impressum').then(m => m.impressumRoutes)
   }
 ];
