@@ -68,7 +68,7 @@
             <itd-sub-menu-dropdown [showSubMenu]="showServices">
                 <li class="p-3 lg:p-5">
                     <a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer" routerLink="/"
-                       [fragment]="Path.SERVICES" translate>
+                       [fragment]="Path.SERVICES" (click)="toggleNavBar(); toggleServices()" translate>
                         menu.services.what-we-do
                     </a>
                 </li>
@@ -139,7 +139,7 @@
             <itd-sub-menu-dropdown [showSubMenu]="showAboutUs">
                 <li class="p-3 lg:p-5">
                     <a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer" routerLink="/"
-                       [fragment]="Path.ABOUT_US" translate>
+                       [fragment]="Path.ABOUT_US" (click)="toggleNavBar(); toggleAboutUs()" translate>
                         menu.about-us.why-it-dobler
                     </a>
                 </li>

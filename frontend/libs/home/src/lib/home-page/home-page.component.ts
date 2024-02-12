@@ -1,9 +1,10 @@
-import {ChangeDetectionStrategy, Component, inject} from '@angular/core';
+import {ChangeDetectionStrategy, Component, inject, signal, WritableSignal} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {
   BulletListComponent,
   CardComponent,
-  LanguageAndThemeAwareImageComponent, SingleColPageLayoutComponent,
+  LanguageAndThemeAwareImageComponent,
+  SingleColPageLayoutComponent,
   StandardPageLayoutComponent
 } from "@frontend/ui";
 import {TranslateModule} from "@ngx-translate/core";
@@ -40,16 +41,24 @@ export class HomePageComponent {
     message: ['']
   });
 
+  public submitStateSig: WritableSignal<string> = signal('default');
+
   public messageSig = toSignal(this.form.controls.message.valueChanges);
 
   public submit(): void {
     this.form.markAllAsTouched();
 
     if (this.form.valid) {
-      console.log(this.form.value);
-      this.httpClient.get('/api/sendemail').subscribe((res) => {
-        console.log(res);
-      })
+      this.submitStateSig.set('working');
+      this.httpClient.post('/api/sendemail', this.form.value).subscribe({
+        next: _ => {
+          this.form.reset();
+          this.submitStateSig.set('done');
+        },
+        error: _ => {
+          this.submitStateSig.set('error');
+        }
+      });
     }
   }
 }

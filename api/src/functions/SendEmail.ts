@@ -3,25 +3,27 @@ import {app, HttpRequest, HttpResponseInit, InvocationContext} from "@azure/func
 export async function SendEmail(request: HttpRequest, context: InvocationContext): Promise<HttpResponseInit> {
     context.log(`Http function processed request for url "${request.url}"`);
 
-    const name = request.query.get('name') || await request.text() || 'world';
+    const body = await request.json()
 
     const sgMail = require('@sendgrid/mail')
 
     sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
-    const response = await sgMail.send({
+    const msg = {
         from: 'dobler.it@gmail.com',
-        to: 'dobler.it@gmail.com',
-        subject: 'Sending with SendGrid is Fun',
-        text: 'and easy to do anywhere, even with Node.js',
+        to: 'yanic.dobler@gmail.com',
+        subject: `IT-Dobler: New Contact request from ${body['name']}`,
+        text: `Name: ${body['name']}, email: ${body['email']}, phoneNumber: ${body['phoneNumber'] || '-'}, message: ${body['message'] || '-'}`,
         html: '<strong>and easy to do anywhere, even with Node.js</strong>',
-    })
+    }
 
-    return {body: `Hello, ${name}!, MailResponse: ${response}`};
+    const response = await sgMail.send(msg);
+
+    return {body: `Message: ${JSON.stringify(msg)}, Response: ${response}`};
 }
 
 app.http('SendEmail', {
-    methods: ['GET', 'POST'],
+    methods: ['POST'],
     authLevel: 'anonymous',
     handler: SendEmail
 });

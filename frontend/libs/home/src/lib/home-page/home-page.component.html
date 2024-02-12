@@ -165,15 +165,28 @@
                               [formControl]="control"
                               class="block p-2.5 mt-2 w-full text-sm text-itd-black bg-light-gold focus-visible:outline-none"></textarea>
                 </div>
-                <div class="text-center xl:text-end">
+                <div class="text-center lg:text-end">
                     <button type="submit"
                             class="text-2xl font-normal text-white dark:text-itd-black bg-gold hover:bg-light-gold rounded-full px-12 py-2 text-center mb-2 dark:bg-gold dark:hover:bg-light-gold"
                             translate>
                         contact.form.send
                     </button>
                 </div>
+
+                <div [ngSwitch]="submitStateSig()" class="text-center mt-4">
+                    <div *ngSwitchCase="'working'">
+                        <span translate>contact.form.working</span>
+                        <img src="assets/images/dark-mode/logo-plain.svg" class="h-4 ml-3 animate-spin inline">
+                    </div>
+                    <div *ngSwitchCase="'done'" class="text-gold" translate>
+                        contact.form.done
+                    </div>
+                    <div *ngSwitchCase="'error'" translate>
+                        contact.form.error
+                    </div>
+                </div>
             </form>
-            <div class="flex-1 flex-grow lg:ml-16">
+            <div class="flex-1 flex-grow lg:ml-16 mt-8 lg:mt-0">
                 <h2 class="mt-2 font-orbitron text-2xl"><img
                         class="inline lg:block h-5 lg:h-12 align-baseline mr-1 lg:mb-1"
                         src="assets/images/dark-mode/logo-plain.svg"

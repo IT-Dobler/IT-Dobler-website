@@ -10,6 +10,9 @@ module.exports = {
     ],
     theme: {
         extend: {
+            fontSize: {
+                xxs: ['10px', '0.875rem'],
+            },
             colors: {
                 'itd-black': '#09090B',
                 'gold': '#DCA54C',
