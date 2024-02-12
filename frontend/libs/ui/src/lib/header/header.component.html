@@ -42,7 +42,7 @@
     </div>
 
     <!-- Mobile menu, show/hide based on menu state. -->
-    <div *ngIf="showMenu" class="lg:hidden">
+    <div *ngIf="showMenu" class="lg:hidden h-[calc(100vh-100px)] overflow-scroll">
         <div class="space-y-1 px-2 pb-3 pt-2">
             <ng-container [ngTemplateOutlet]="mainNavContent"></ng-container>
             <div class="flex justify-around">
@@ -58,11 +58,12 @@
 <ng-template #mainNavContent>
     <ul class="flex flex-col lg:flex-row">
         <li class="group py-5 px-3 group/sub-menu">
-            <div class="flex justify-between" (click)="toggleServices()">
+            <div class="flex justify-between">
                 <a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer" routerLink="/"
-                   [fragment]="Path.SERVICES" translate>menu.services</a>
-
-                <itd-sub-menu-toggle-indicator [subMenuOpen]="showServices"></itd-sub-menu-toggle-indicator>
+                   [fragment]="Path.SERVICES" translate (click)="toggleNavBar()">menu.services</a>
+                <a (click)="toggleServices()">
+                    <itd-sub-menu-toggle-indicator [subMenuOpen]="showServices"></itd-sub-menu-toggle-indicator>
+                </a>
             </div>
 
             <itd-sub-menu-dropdown [showSubMenu]="showServices">
@@ -81,60 +82,64 @@
             </itd-sub-menu-dropdown>
         </li>
         <li class="py-5 px-3"><a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer" routerLink="/"
-                                 [fragment]="Path.PLANNING" translate>menu.planning</a>
+                                 [fragment]="Path.PLANNING" (click)="toggleNavBar()" translate>menu.planning</a>
         </li>
         <li class="py-5 px-3 group/sub-menu">
-            <div class="flex justify-between" (click)="toggleReferences()">
+            <div class="flex justify-between">
                 <a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer" routerLink="/"
-                   [fragment]="Path.REFERENCES" translate>menu.references</a>
+                   [fragment]="Path.REFERENCES" (click)="toggleNavBar()" translate>menu.references</a>
 
-                <itd-sub-menu-toggle-indicator [subMenuOpen]="showReferences"></itd-sub-menu-toggle-indicator>
+                <a (click)="toggleReferences()">
+                    <itd-sub-menu-toggle-indicator [subMenuOpen]="showReferences"></itd-sub-menu-toggle-indicator>
+                </a>
             </div>
 
             <itd-sub-menu-dropdown [showSubMenu]="showReferences">
                 <li class="p-3 lg:p-5">
                     <a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer"
-                       [routerLink]="[Path.REFERENCES + '/' + Path.CONTRACTOR]" translate>
+                       [routerLink]="'/' + [Path.REFERENCES + '/' + Path.CONTRACTOR]" translate>
                         menu.references.contractor
                     </a>
                 </li>
                 <li class="p-3 lg:p-5">
                     <a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer"
-                       [routerLink]="[Path.REFERENCES + '/' + Path.HAPPY_POST]" translate>
+                       [routerLink]="'/' + [Path.REFERENCES + '/' + Path.HAPPY_POST]" translate>
                         menu.references.happy-post
                     </a>
                 </li>
                 <li class="p-3 lg:p-5">
                     <a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer"
-                       [routerLink]="[Path.REFERENCES + '/' + Path.YACHT_PARTNER]" translate>
+                       [routerLink]="'/' + [Path.REFERENCES + '/' + Path.YACHT_PARTNER]" translate>
                         menu.references.yachtpartner
                     </a>
                 </li>
                 <li class="p-3 lg:p-5">
                     <a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer"
-                       [routerLink]="[Path.REFERENCES + '/' + Path.HALMA]" translate>
+                       [routerLink]="'/' + [Path.REFERENCES + '/' + Path.HALMA]" translate>
                         menu.references.halma-42
                     </a>
                 </li>
                 <li class="p-3 lg:p-5">
                     <a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer"
-                       [routerLink]="[Path.REFERENCES + '/' + Path.IT_DOBLER]" translate>
+                       [routerLink]="'/' + [Path.REFERENCES + '/' + Path.IT_DOBLER]" translate>
                         menu.references.it-dobler
                     </a>
                 </li>
                 <li class="p-3 lg:p-5">
                     <a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer"
-                       [routerLink]="[Path.REFERENCES + '/' + Path.WEBSITES]" translate>
+                       [routerLink]="'/' + [Path.REFERENCES + '/' + Path.WEBSITES]" translate>
                         menu.references.websites
                     </a>
                 </li>
             </itd-sub-menu-dropdown>
         </li>
         <li class="py-5 px-3 group/sub-menu">
-            <div class="flex justify-between" (click)="toggleAboutUs()">
+            <div class="flex justify-between">
                 <a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer" routerLink="/"
-                   [fragment]="Path.ABOUT_US" translate>menu.about-us</a>
-                <itd-sub-menu-toggle-indicator [subMenuOpen]="showAboutUs"></itd-sub-menu-toggle-indicator>
+                   [fragment]="Path.ABOUT_US" (click)="toggleNavBar()" translate>menu.about-us</a>
+                <a (click)="toggleAboutUs()">
+                    <itd-sub-menu-toggle-indicator [subMenuOpen]="showAboutUs"></itd-sub-menu-toggle-indicator>
+                </a>
             </div>
             <itd-sub-menu-dropdown [showSubMenu]="showAboutUs">
                 <li class="p-3 lg:p-5">

@@ -8,36 +8,45 @@
                 services.what-we-do
             </h3>
             <div class="flex flex-wrap lg:flex-nowrap xl:mb-12">
-                <itd-bullet-list shade="light-gold">
-                    <li [innerHTML]="'services.point-1' | translate"></li>
-                    <li [innerHTML]="'services.point-2' | translate"></li>
-                    <li [innerHTML]="'services.point-3' | translate"></li>
-                </itd-bullet-list>
-                <itd-bullet-list shade="light-gold" class="lg:ml-32">
-                    <li [innerHTML]="'services.point-4' | translate"></li>
-                    <li [innerHTML]="'services.point-5' | translate"></li>
-                    <li [innerHTML]="'services.point-6' | translate"></li>
-                </itd-bullet-list>
+                <div class="lg:flex-1">
+                    <itd-bullet-list shade="light-gold">
+                        <li [innerHTML]="'services.point-1' | translate"></li>
+                        <li [innerHTML]="'services.point-2' | translate"></li>
+                        <li [innerHTML]="'services.point-6' | translate"></li>
+                    </itd-bullet-list>
+                </div>
+                <div class="lg:w-28"></div>
+                <div class="lg:flex-1">
+                    <itd-bullet-list shade="light-gold">
+                        <li [innerHTML]="'services.point-4' | translate"></li>
+                        <li [innerHTML]="'services.point-5' | translate"></li>
+                    </itd-bullet-list>
+                </div>
             </div>
             <h3 class="text-xl font-orbitron text-gold cursor-pointer" routerLink="/our-stack">
-                <span class="border-b border-white dark:border-gold" translate>our-stack.title</span>
+                <span class="border-b border-gold" translate>our-stack.title</span>
             </h3>
         </itd-card-component>
     </itd-standard-section-layout>
     <itd-standard-section-layout [id]="Path.PLANNING" class="border-b-2 border-gold shadow-md">
         <itd-card-component [title]="'project-planning.title' | translate" shade="gold">
             <div class="flex flex-wrap lg:flex-nowrap xl:mb-12">
-                <itd-bullet-list shade="gold">
-                    <li [innerHTML]="'project-planning.point-1' | translate"></li>
-                    <li [innerHTML]="'project-planning.point-2' | translate"></li>
-                    <li [innerHTML]="'project-planning.point-3' | translate"></li>
-                </itd-bullet-list>
-                <itd-bullet-list shade="gold" class="lg:ml-32">
-                    <li [innerHTML]="'project-planning.point-4' | translate"></li>
-                    <li [innerHTML]="'project-planning.point-5' | translate"></li>
-                    <li [innerHTML]="'project-planning.point-6' | translate"></li>
-                    <li [innerHTML]="'project-planning.point-7' | translate"></li>
-                </itd-bullet-list>
+                <div class="lg:flex-1">
+                    <itd-bullet-list shade="gold">
+                        <li [innerHTML]="'project-planning.point-1' | translate"></li>
+                        <li [innerHTML]="'project-planning.point-2' | translate"></li>
+                        <li [innerHTML]="'project-planning.point-3' | translate"></li>
+                    </itd-bullet-list>
+                </div>
+                <div class="lg:w-28"></div>
+                <div class="lg:flex-1">
+                    <itd-bullet-list shade="gold" class="lg:ml-32">
+                        <li [innerHTML]="'project-planning.point-4' | translate"></li>
+                        <li [innerHTML]="'project-planning.point-5' | translate"></li>
+                        <li [innerHTML]="'project-planning.point-6' | translate"></li>
+                        <li [innerHTML]="'project-planning.point-7' | translate"></li>
+                    </itd-bullet-list>
+                </div>
             </div>
         </itd-card-component>
     </itd-standard-section-layout>
@@ -105,24 +114,27 @@
     </itd-standard-section-layout>
     <itd-standard-section-layout [id]="Path.ABOUT_US">
         <itd-card-component [title]="'about-us.title' | translate">
-            <h3 class="mb-4 xl:mb-8 text-xl font-orbitron text-white dark:text-gold" translate>
+            <h3 class="mb-4 xl:mb-8 text-xl font-orbitron text-white dark:text-light-gold" translate>
                 about-us.why-it-dobler</h3>
             <div class="flex flex-wrap lg:flex-nowrap xl:mb-12">
-                <itd-bullet-list shade="gold">
-                    <li [innerHTML]="'about-us.point-1' | translate"></li>
-                    <li [innerHTML]="'about-us.point-2' | translate"></li>
-                    <li [innerHTML]="'about-us.point-3' | translate"></li>
-                </itd-bullet-list>
-                <itd-bullet-list shade="gold" class="lg:ml-32">
-                    <li [innerHTML]="'about-us.point-4' | translate"></li>
-                    <li [innerHTML]="'about-us.point-5' | translate"></li>
-                    <li [innerHTML]="'about-us.point-6' | translate"></li>
-                    <li [innerHTML]="'about-us.point-7' | translate"></li>
-                </itd-bullet-list>
+                <div class="lg:flex-1">
+                    <itd-bullet-list shade="gold">
+                        <li [innerHTML]="'about-us.point-1' | translate"></li>
+                        <li [innerHTML]="'about-us.point-2' | translate"></li>
+                        <li [innerHTML]="'about-us.point-4' | translate"></li>
+                    </itd-bullet-list>
+                </div>
+                <div class="lg:w-28"></div>
+                <div class="lg:flex-1">
+                    <itd-bullet-list shade="gold" class="lg:ml-32">
+                        <li [innerHTML]="'about-us.point-5' | translate"></li>
+                        <li [innerHTML]="'about-us.point-6' | translate"></li>
+                        <li [innerHTML]="'about-us.point-7' | translate"></li>
+                    </itd-bullet-list>
+                </div>
             </div>
-            <h3 class="xl:mb-8 text-xl cursor-pointer font-orbitron text-white dark:text-gold" routerLink="/team">
-                <span class="border-b border-white dark:border-gold"
-                      translate>team.title</span>
+            <h3 class="xl:mb-8 text-xl cursor-pointer font-orbitron text-white dark:text-light-gold" routerLink="/team">
+                <span class="border-b border-white dark:border-light-gold" translate>team.title</span>
             </h3>
         </itd-card-component>
     </itd-standard-section-layout>
@@ -131,39 +143,41 @@
         <div class="flex flex-col lg:flex-row lg:items-center mx-4">
             <!-- The form could benefit from some refactoring, however the initial investment is very high -->
             <form class="flex-1 flex-grow" [formGroup]="form" (ngSubmit)="submit()">
-                <p class="mb-4 font-orbitron text-sm" translate>contact.intro</p>
+                <p class="mb-4 font-orbitron" translate>contact.intro</p>
                 <div *ngIf="form.controls.name as control" class="mb-5">
-                    <label for="name" class="block mb-1 text-sm text-itd-black dark:text-gold" translate>contact.form.name</label>
+                    <label for="name" class="block mb-1 text-itd-black dark:text-gold"
+                           translate>contact.form.name</label>
                     <input type="text" id="name"
                            [formControl]="control"
-                           class="bg-light-gold text-itd-black text-sm focus-visible:outline-0 block w-full p-2.5 dark:bg-light-gold dark:text-itd-black">
-                    <p *ngIf="control.touched && control.invalid" class="mt-2 text-sm text-red-600 dark:text-red-500"
+                           class="bg-light-gold text-itd-black focus-visible:outline-0 block w-full p-2.5 dark:bg-light-gold dark:text-itd-black">
+                    <p *ngIf="control.touched && control.invalid" class="mt-2 text-red-600 dark:text-red-500"
                        translate>
                         contact.form.name.error
                     </p>
                 </div>
                 <div *ngIf="form.controls.email as control" class="mb-5">
-                    <label for="email" class="block mb-1 text-sm text-itd-black dark:text-gold" translate>contact.form.email</label>
+                    <label for="email" class="block mb-1 text-itd-black dark:text-gold"
+                           translate>contact.form.email</label>
                     <input type="text" id="email"
                            [formControl]="control"
-                           class="bg-light-gold text-itd-black text-sm focus-visible:outline-0 block w-full p-2.5 dark:bg-light-gold dark:text-itd-black"
+                           class="bg-light-gold text-itd-black focus-visible:outline-0 block w-full p-2.5 dark:bg-light-gold dark:text-itd-black"
                            translate>
-                    <p *ngIf="control.touched && control.invalid" class="mt-2 text-sm text-red-600 dark:text-red-500"
+                    <p *ngIf="control.touched && control.invalid" class="mt-2 text-red-600 dark:text-red-500"
                        translate>
                         contact.form.email.error
                 </div>
                 <div *ngIf="form.controls.phoneNumber as control" class="mb-5">
-                    <label for="phone-number" class="block mb-1 text-sm text-itd-black dark:text-gold" translate>contact.form.phone-number</label>
+                    <label for="phone-number" class="block mb-1 text-itd-black dark:text-gold" translate>contact.form.phone-number</label>
                     <input type="text" id="phone-number"
                            [formControl]="control"
-                           class="bg-light-gold text-itd-black text-sm focus-visible:outline-0 block w-full p-2.5 dark:bg-light-gold dark:text-itd-black">
+                           class="bg-light-gold text-itd-black focus-visible:outline-0 block w-full p-2.5 dark:bg-light-gold dark:text-itd-black">
                 </div>
                 <div *ngIf="form.controls.message as control" class="mb-5 relative">
                     <img *ngIf="!messageSig() || messageSig()?.length === 0"
                          src="assets/images/icons8-ball-point-pen.svg" class="absolute top-3 left-3 w-4">
                     <textarea id="message" rows="4"
                               [formControl]="control"
-                              class="block p-2.5 mt-2 w-full text-sm text-itd-black bg-light-gold focus-visible:outline-none"></textarea>
+                              class="block p-2.5 mt-2 w-full text-itd-black bg-light-gold focus-visible:outline-none"></textarea>
                 </div>
                 <div class="text-center lg:text-end">
                     <button type="submit"
