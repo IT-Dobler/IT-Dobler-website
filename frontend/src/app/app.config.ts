@@ -23,6 +23,18 @@ const disableAnimations: boolean = window.matchMedia(
 
 export const appConfig: ApplicationConfig = {
   providers: [
+    importProvidersFrom(HttpClientModule),
+    importProvidersFrom(
+        TranslateModule.forRoot({
+          useDefaultLang: false,  // easier to notice missing translations
+          loader: {
+            provide: TranslateLoader,
+            useFactory: httpLoaderFactory,
+            deps: [HttpClient],
+          },
+        })
+    ),
+
     !disableAnimations ? provideAnimations() : provideNoopAnimations(),
     provideRouter(appRoutes,
         withRouterConfig({
@@ -46,18 +58,6 @@ export const appConfig: ApplicationConfig = {
     provideStoreDevtools(),
 
     provideI18nTitleStrategy(),
-
-    importProvidersFrom(HttpClientModule),
-    importProvidersFrom(
-        TranslateModule.forRoot({
-          useDefaultLang: false,  // easier to notice missing translations
-          loader: {
-            provide: TranslateLoader,
-            useFactory: httpLoaderFactory,
-            deps: [HttpClient],
-          },
-        })
-    ),
     // init (has to last, order matters)
     {
       provide: ENVIRONMENT_INITIALIZER,

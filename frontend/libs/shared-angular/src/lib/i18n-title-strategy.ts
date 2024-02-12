@@ -7,7 +7,7 @@ import {Store} from "@ngrx/store";
 import {withLatestFrom} from "rxjs";
 import {toSignal} from "@angular/core/rxjs-interop";
 
-const {selectTitle} = getRouterSelectors();
+const {selectTitle, selectUrl} = getRouterSelectors();
 
 const APP_NAME_I18N_KEY = 'app.name';
 
@@ -21,14 +21,18 @@ export class I18nTitleStrategy extends TitleStrategy {
   constructor() {
     super();
 
-    const langChangeWithTitle$ = this.translationService.onTranslationChange.pipe(
-        withLatestFrom(this.store.select(selectTitle))
+    const langChangeWithTitle$ = this.translationService.onLangChange.pipe(
+        withLatestFrom(
+            this.store.select(selectTitle),
+            // Without this second selector, the effect will not run at the proper time on first load
+            this.store.select(selectUrl)
+        ),
     );
 
     const langChangeWithTitle = toSignal(langChangeWithTitle$);
 
     effect(() => {
-      const [_, title] = langChangeWithTitle() || [];
+      const [_, title, __] = langChangeWithTitle() || [];
       if (title) {
         this.updateTitleInternal(title);
       }
