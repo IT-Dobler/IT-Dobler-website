@@ -8,12 +8,11 @@ export enum Path {
   TEAM = 'team',
 
   // References sub-pages
-  CONTRACTOR = 'contractor',
+  CAREER = 'career',
   HAPPY_POST = 'happy-post',
   YACHT_PARTNER = 'yacht-partner',
   SAF_TIMER = 'saf-timer',
   HALMA = 'halma',
   WEBSITES = 'websites',
-  IT_DOBLER = 'it-dobler',
   IMPRESSUM = 'impressum'
 }

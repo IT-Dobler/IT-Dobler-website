@@ -4,11 +4,11 @@ import {GridPageLayoutComponent, SmallCardComponent} from "@frontend/ui";
 import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
-  selector: 'itd-it-dobler-page',
+  selector: 'itd-career-page',
   standalone: true,
   imports: [CommonModule, GridPageLayoutComponent, TranslateModule, SmallCardComponent],
-  templateUrl: './it-dobler-page.component.html',
+  templateUrl: './career-page.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ItDoblerPageComponent {
+export class CareerPageComponent {
 }

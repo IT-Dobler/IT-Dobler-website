@@ -62,10 +62,9 @@
                 <h3 class="flex-1 text-xl font-orbitron text-gold mb-2" translate>
                     references.current.title</h3>
                 <ul class="flex-[3] list-disc text-base">
-                    <li class="mb-2"><p [routerLink]="[Path.REFERENCES + '/' + Path.CONTRACTOR]">
+                    <li class="mb-2"><p [routerLink]="[Path.REFERENCES + '/' + Path.CAREER]">
                         <span class="border-b border-itd-black dark:border-light-gold cursor-pointer"
-                              translate>references.current.contractor</span><img class="inline ml-2"
-                                                                                 src="assets/images/swiss-logo.svg"></p>
+                              translate>references.current.career</span></p>
                     </li>
                     <li class="mb-2"><p translate [routerLink]="[Path.REFERENCES + '/' + Path.HAPPY_POST]">
                         <span class="border-b border-itd-black dark:border-light-gold cursor-pointer"
@@ -88,17 +87,15 @@
                     references.realized.title</h3>
                 <ul class="flex-[3] list-disc text-base">
                     <li class="mb-2">
-                        <p [routerLink]="[Path.REFERENCES + '/' + Path.IT_DOBLER]">
-                            <span class="border-b border-itd-black dark:border-light-gold cursor-pointer" translate>references.realized.it-dobler</span>
-                            <img class="inline ml-2 h-[20px]"
-                                 [src]="'assets/images/' + themeSig() + '-mode/logo-plain.svg'">
-                        </p>
-                    </li>
-                    <li class="mb-2">
-                        <p [routerLink]="[Path.REFERENCES + '/' + Path.HALMA]">
-                            <span translate
+                        <p>
+                            <span [routerLink]="[Path.REFERENCES + '/' + Path.HALMA]"
+                                  translate
                                   class="border-b border-itd-black dark:border-light-gold cursor-pointer">references.realized.halma</span>
                             <img class="inline ml-2" [src]="'assets/images/' + themeSig() + '-mode/halma-logo.svg'">
+                            <a href="https://halma42.com" target="_blank"
+                               class="ml-4 text-light-blue border-b border-light-blue">Link</a>
+                            <a href="https://github.com/dobler-it/Halma" target="_blank"
+                               class="ml-4 text-light-blue border-b border-light-blue">Repo</a>
                         </p>
                     </li>
                     <li class="mb-2">

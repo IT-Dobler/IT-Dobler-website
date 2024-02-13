@@ -3,18 +3,52 @@
         <itd-card-component [title]="'our-stack.title' | translate" shade="light-gold">
             <itd-bullet-list shade="light-gold">
                 <li translate>our-stack.point-1</li>
+                <br>
                 <li translate>our-stack.point-2</li>
             </itd-bullet-list>
             <br>
             <h3 class="font-orbitron text-xl text-gold" translate>our-stack.services.title</h3>
-            <p translate>our-stack.services.description</p>
+            <ul class="list-disc ps-8">
+                <li>AWS Suite
+                    <ul class="list-disc ps-8">
+                        <li>API Gateway</li>
+                        <li>Lambda</li>
+                        <li>RDS</li>
+                        <li>Cognito</li>
+                        <li>S3</li>
+                        <li>SNS</li>
+                        <li>Serverless framework / CloudFormation IaC</li>
+                    </ul>
+                </li>
+                <li>Localzy</li>
+                <li>Azure Suite
+                    <ul class="list-disc ps-8">
+                        <li>Static Web App</li>
+                        <li>Azure Function</li>
+                    </ul>
+                </li>
+            </ul>
             <br>
             <h3 class="font-orbitron text-xl text-gold" translate>our-stack.tools.title</h3>
-            <p translate>our-stack.tools.description</p>
-            <br>
-            <itd-bullet-list shade="light-gold">
-                <li [innerHTML]="'our-stack.point-3' | translate"></li>
-            </itd-bullet-list>
+            <ul class="list-disc ps-8">
+                <li>Version control (GitHub / GitLab / Bitbucket)
+                    <ul class="list-disc ps-8">
+                        <li>Also the CI/CD options of these</li>
+                    </ul>
+                </li>
+                <li>Java (Quarkus, experience with SpringBoot)</li>
+                <li>Angular17</li>
+                <li>Various frontend libs (Angular Material, Bootstrap, DaisyUI, Tailwind CSS)</li>
+                <li>Store pattern (both NgRx and NGXS)</li>
+                <li>NodeJS</li>
+                <li>PostgreSQL / MariaDB</li>
+                <li>Flutter</li>
+                <li>E2E & Unit test (Cypress, Jest & JUnit5)</li>
+                <li>REST / OpenAPI / JSON</li>
+                <li>SOAP / XML</li>
+                <li>Figma</li>
+            </ul>
         </itd-card-component>
     </itd-standard-section-layout>
 </itd-single-col-page-layout>
+

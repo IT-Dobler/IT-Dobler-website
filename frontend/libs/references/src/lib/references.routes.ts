@@ -1,11 +1,10 @@
 import {Route} from "@angular/router";
 import {Path} from "@frontend/shared-angular";
-import {ContractorPageComponent} from "./contractor-page/contractor-page.component";
+import {CareerPageComponent} from "./career-page/career-page.component";
 import {HappyPostPageComponent} from "./happy-post-page/happy-post-page.component";
 import {SafTimerPageComponent} from "./saf-timer-page/saf-timer-page.component";
 import {YpPageComponent} from "./yp-page/yp-page.component";
 import {HalmaPageComponent} from "./halma-page/halma-page.component";
-import {ItDoblerPageComponent} from "./it-dobler-page/it-dobler-page.component";
 import {WebsitesPageComponent} from "./websites-page/websites-page.component";
 
 export const referencesRoutes: Route[] = [
@@ -14,9 +13,9 @@ export const referencesRoutes: Route[] = [
     pathMatch: 'prefix',
     children: [
       {
-        path: Path.CONTRACTOR,
-        title: 'references.contractor.browser-title',
-        component: ContractorPageComponent
+        path: Path.CAREER,
+        title: 'references.career.browser-title',
+        component: CareerPageComponent
       },
       {
         path: Path.HAPPY_POST,
@@ -39,18 +38,13 @@ export const referencesRoutes: Route[] = [
         component: HalmaPageComponent
       },
       {
-        path: Path.IT_DOBLER,
-        title: 'references.it-dobler.browser-title',
-        component: ItDoblerPageComponent
-      },
-      {
         path: Path.WEBSITES,
         title: 'references.websites.browser-title',
         component: WebsitesPageComponent
       },
       {
         path: '**',
-        redirectTo: Path.CONTRACTOR
+        redirectTo: Path.CAREER
       }
     ]
   },

@@ -1,14 +1,20 @@
 <itd-grid-page-layout titleKey="references.websites.title">
-    <itd-small-card titleKey="references.websites.wordpress.title">
-        <p class="" translate>
-            <img class="inline ml-2 h-[20px]" [src]="'assets/images/christin-logo.png'">
-            <a href="https://christin-art.com" target="_blank" class="ml-2 text-lg font-medium border-b border-light-blue cursor-pointer text-light-blue"a>christin-art.com</a>
-        </p>
-    </itd-small-card>
-    <itd-small-card titleKey="references.websites.angular.title">
-        <p>
-            <img class="inline ml-2 h-[20px]" [src]="'assets/images/' + themeSig() + '-mode/logo-plain.svg'">
-            <a href="/" target="_blank" class="ml-2 text-lg font-medium border-b border-light-blue cursor-pointer text-light-blue">it-dobler.com</a>
-        </p>
-    </itd-small-card>
+    <div class="bg-light-gold dark:bg-transparent dark:border-[3px] dark:border-gold rounded-tl-[2rem] rounded-br-[4rem] h-full">
+        <h2 class="py-2 text-2xl text-center font-orbitron border-b-2 border-b-gold">
+            <img class="inline mr-2 h-[20px]" [src]="'assets/images/christin-logo.png'">
+            <a href="https://christin-art.com" target="_blank" class="border-b border-light-blue cursor-pointer text-light-blue">christin-art.com</a>
+        </h2>
+        <div class="p-4 pb-14">
+            <p translate>references.websites.christin-art.description</p>
+        </div>
+    </div>
+    <div class="bg-light-gold dark:bg-transparent dark:border-[3px] dark:border-gold rounded-tl-[2rem] rounded-br-[4rem] h-full">
+        <h2 class="py-2 text-2xl text-center font-orbitron border-b-2 border-b-gold">
+            <img class="inline mr-2 h-[20px]" [src]="'assets/images/dark-mode/logo-plain.svg'">
+            <a href="/" target="_blank" class="border-b border-light-blue cursor-pointer text-light-blue">it-dobler.com</a>
+        </h2>
+        <div class="p-4 pb-14">
+            <p translate>references.websites.it-dobler.description</p>
+        </div>
+    </div>
 </itd-grid-page-layout>
