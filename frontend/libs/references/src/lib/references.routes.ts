@@ -29,7 +29,7 @@ export const referencesRoutes: Route[] = [
       },
       {
         path: Path.YACHT_PARTNER,
-        title: 'references.yp.browser-title',
+        title: 'references.yachtpartner.browser-title',
         component: YpPageComponent
       },
       {
