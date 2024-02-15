@@ -50,7 +50,7 @@ export class HomePageComponent {
 
     if (this.form.valid) {
       this.submitStateSig.set('working');
-      this.httpClient.post('/api/sendemail', this.form.value).subscribe({
+      this.httpClient.post('/api/SendEmail', this.form.value).subscribe({
         next: _ => {
           this.form.reset();
           this.submitStateSig.set('done');
