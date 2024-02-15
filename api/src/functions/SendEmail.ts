@@ -14,7 +14,6 @@ export async function SendEmail(request: HttpRequest, context: InvocationContext
         to: 'yanic.dobler@gmail.com',
         subject: `IT-Dobler: New Contact request from ${body['name']}`,
         text: `Name: ${body['name']}, email: ${body['email']}, phoneNumber: ${body['phoneNumber'] || '-'}, message: ${body['message'] || '-'}`,
-        html: '<strong>and easy to do anywhere, even with Node.js</strong>',
     }
 
     const response = await sgMail.send(msg);
