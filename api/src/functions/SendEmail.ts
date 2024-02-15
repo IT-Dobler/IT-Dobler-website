@@ -16,9 +16,9 @@ export async function SendEmail(request: HttpRequest, context: InvocationContext
         text: `Name: ${body['name']}, email: ${body['email']}, phoneNumber: ${body['phoneNumber'] || '-'}, message: ${body['message'] || '-'}`,
     }
 
-    const response = await sgMail.send(msg);
+    await sgMail.send(msg);
 
-    return {body: `Message: ${JSON.stringify(msg)}, Response: ${response}`};
+    return;
 }
 
 app.http('SendEmail', {
