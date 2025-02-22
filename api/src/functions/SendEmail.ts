@@ -11,7 +11,7 @@ export async function SendEmail(request: HttpRequest, context: InvocationContext
 
     const msg = {
         from: 'dobler.it@gmail.com',
-        to: 'admin@it-dobler.com',
+        to: 'yanic.dobler@gmail.com',
         subject: `IT-Dobler: New Contact request from ${body['name']}`,
         text: `Name: ${body['name']}, email: ${body['email']}, phoneNumber: ${body['phoneNumber'] || '-'}, message: ${body['message'] || '-'}`,
     };
