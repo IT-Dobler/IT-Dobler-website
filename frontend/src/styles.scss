@@ -36,3 +36,8 @@
 html {
   scroll-behavior: smooth;
 }
+
+// Defined here because tailwind css is not in the static bundle that translations are in.
+.custom-semibold {
+  font-weight: 580;
+}

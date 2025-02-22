@@ -3,10 +3,10 @@
         <div class="flex-1"></div>
         <div class="flex mx-4">
             <img *ngIf="logoName" [src]="getImagePath()" alt="Logo of reference" class="mr-4 min-w-8">
-            <h1 class="font-orbitron text-3xl text-gold">{{titleKey | translate}}</h1>
+            <h1 class="font-orbitron text-3xl text-gold"><span [innerHTML]="titleKey | translate"></span></h1>
         </div>
         <div class="flex-1">
-            <div class="ml-auto w-6 mr-4 lg:mr-32 cursor-pointer" routerLink="/" [fragment]="Path.REFERENCES">
+            <div class="ml-auto w-6 mr-4 lg:mr-32 cursor-pointer" [routerLink]="backRoute ? backRoute : '/'" [fragment]="Path.REFERENCES">
                 <itd-close-svg></itd-close-svg>
             </div>
         </div>

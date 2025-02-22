@@ -6,7 +6,8 @@
     "start": "nx serve",
     "lint": "nx lint",
     "build": "nx build",
-    "test": "nx test"
+    "test": "nx test",
+    "reset": "nx reset"
   },
   "private": true,
   "dependencies": {

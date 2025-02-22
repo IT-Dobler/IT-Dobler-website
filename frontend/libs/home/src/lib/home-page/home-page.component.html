@@ -59,12 +59,27 @@
             </div>
 
             <div class="flex flex-col md:flex-row md:flex-nowrap mb-8">
-                <h3 class="flex-1 text-xl font-orbitron text-gold mb-2" translate>
+                <h3 class="flex-[2] text-xl font-orbitron text-gold mb-2" translate>references.top-reference.title</h3>
+                <ul class="flex-[3] list-disc text-base">
+                    <li class="mb-2">
+                        <a routerLink="/" [fragment]="Path.CONTACT">
+                            <span class="border-b border-itd-black dark:border-light-gold cursor-pointer"
+                                  translate>references.top-reference.auf-anfrage</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="flex flex-col md:flex-row md:flex-nowrap mb-8">
+                <h3 class="flex-[2] text-xl font-orbitron text-gold mb-2" translate>
                     references.current.title</h3>
                 <ul class="flex-[3] list-disc text-base">
-                    <li class="mb-2"><p [routerLink]="[Path.REFERENCES + '/' + Path.CAREER]">
-                        <span class="border-b border-itd-black dark:border-light-gold cursor-pointer"
-                              translate>references.current.career</span></p>
+                    <li class="mb-2">
+                        <p [routerLink]="[Path.REFERENCES + '/' + Path.DE_SPOC]">
+                            <span class="border-b border-itd-black dark:border-light-gold cursor-pointer"
+                                  [innerHTML]="'references.current.de-spoc' | translate"></span><img class="inline ml-2"
+                                                                                                     src="assets/images/despoc-logo.svg">
+                        </p>
                     </li>
                     <li class="mb-2"><p translate [routerLink]="[Path.REFERENCES + '/' + Path.HAPPY_POST]">
                         <span class="border-b border-itd-black dark:border-light-gold cursor-pointer"
@@ -75,15 +90,15 @@
                     <!--                    <li><p translate [routerLink]="[Path.REFERENCES + '/' + Path.SAF_TIMER]">-->
                     <!--                        <span class="border-b border-itd-black dark:border-gold cursor-pointer"-->
                     <!--                              translate>references.current.saf-timer</span></p></li>-->
-                    <li class="mb-2"><p translate [routerLink]="[Path.REFERENCES + '/' + Path.YACHT_PARTNER]">
-                        <span class="border-b border-itd-black dark:border-light-gold cursor-pointer" translate>references.current.yp</span>
-                    </p></li>
+                    <!--                    <li class="mb-2"><p translate [routerLink]="[Path.REFERENCES + '/' + Path.YACHT_PARTNER]">-->
+                    <!--                        <span class="border-b border-itd-black dark:border-light-gold cursor-pointer" translate>references.current.yp</span>-->
+                    <!--                    </p></li>-->
                 </ul>
             </div>
 
 
             <div class="flex flex-col md:flex-row md:flex-nowrap">
-                <h3 class="flex-1 text-xl font-orbitron text-gold mb-2" translate>
+                <h3 class="flex-[2] text-xl font-orbitron text-gold mb-2" translate>
                     references.realized.title</h3>
                 <ul class="flex-[3] list-disc text-base">
                     <li class="mb-2">
@@ -131,8 +146,8 @@
                     </itd-bullet-list>
                 </div>
             </div>
-            <h3 class="xl:mb-8 text-xl cursor-pointer font-orbitron text-white dark:text-light-gold" routerLink="/team">
-                <span class="border-b border-white dark:border-light-gold" translate>team.title</span>
+            <h3 class="xl:mb-8 text-xl cursor-pointer font-orbitron text-white dark:text-light-gold" routerLink="/founder">
+                <span class="border-b border-white dark:border-light-gold" translate>founder.title</span>
             </h3>
         </itd-card-component>
     </itd-standard-section-layout>
@@ -211,7 +226,7 @@
                 <p class="mt-2" translate>contact.address.uruguay</p>
                 <p>
                     <span translate>contact.address.phone</span>
-                    <span class="text-base" translate>+41 79 551 36 48</span>
+                    <span class="text-base" translate>+598 92 677 142</span>
                 </p>
             </div>
         </div>

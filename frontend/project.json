@@ -46,6 +46,13 @@
     },
     "serve": {
       "executor": "@angular-devkit/build-angular:dev-server",
+      "options": {
+        "host": "it-dobler.localhost",
+        "port": 4200,
+        "ssl": true,
+        "sslCert": "../developer-local-settings/config/certs/it-dobler.localhost.pem",
+        "sslKey": "../developer-local-settings/config/certs/it-dobler.localhost.key"
+      },
       "configurations": {
         "production": {
           "buildTarget": "frontend:build:production"

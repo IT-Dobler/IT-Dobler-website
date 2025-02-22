@@ -6,12 +6,18 @@ import {SafTimerPageComponent} from "./saf-timer-page/saf-timer-page.component";
 import {YpPageComponent} from "./yp-page/yp-page.component";
 import {HalmaPageComponent} from "./halma-page/halma-page.component";
 import {WebsitesPageComponent} from "./websites-page/websites-page.component";
+import {DeSpocPageComponent} from "./de-spoc-page/de-spoc-page.component";
 
 export const referencesRoutes: Route[] = [
   {
     path: '',
     pathMatch: 'prefix',
     children: [
+      {
+        path: Path.DE_SPOC,
+        title: 'references.de-spoc.browser-title',
+        component: DeSpocPageComponent
+      },
       {
         path: Path.CAREER,
         title: 'references.career.browser-title',

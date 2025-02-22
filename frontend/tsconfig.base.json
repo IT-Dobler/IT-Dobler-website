@@ -20,7 +20,7 @@
       "@frontend/our-stack": ["libs/our-stack/src/index.ts"],
       "@frontend/references": ["libs/references/src/index.ts"],
       "@frontend/shared-angular": ["libs/shared-angular/src/index.ts"],
-      "@frontend/team": ["libs/team/src/index.ts"],
+      "@frontend/founder": ["libs/founder/src/index.ts"],
       "@frontend/ui": ["libs/ui/src/index.ts"]
     }
   }

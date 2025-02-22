@@ -5,9 +5,10 @@ export enum Path {
   REFERENCES = 'references',
   ABOUT_US = 'about-us',
   CONTACT = 'contact',
-  TEAM = 'team',
+  FOUNDER = 'founder',
 
   // References sub-pages
+  DE_SPOC = "despoc",
   CAREER = 'career',
   HAPPY_POST = 'happy-post',
   YACHT_PARTNER = 'yacht-partner',

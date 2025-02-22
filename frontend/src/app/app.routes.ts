@@ -14,8 +14,8 @@ export const appRoutes: Route[] = [
     loadChildren: () => import('@frontend/our-stack').then(m => m.ourStackRoutes)
   },
   {
-    path: Path.TEAM,
-    loadChildren: () => import('@frontend/team').then(m => m.teamRoutes)
+    path: Path.FOUNDER,
+    loadChildren: () => import('@frontend/founder').then(m => m.founderRoutes)
   },
   {
     path: Path.REFERENCES,
