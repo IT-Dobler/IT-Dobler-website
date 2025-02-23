@@ -5,7 +5,6 @@ import {
   CardComponent,
   LanguageAndThemeAwareImageComponent,
   SingleColPageLayoutComponent,
-  StandardPageLayoutComponent
 } from "@frontend/ui";
 import {TranslateModule} from "@ngx-translate/core";
 import {
@@ -17,11 +16,12 @@ import {FormsModule, NonNullableFormBuilder, ReactiveFormsModule, Validators} fr
 import {toSignal} from "@angular/core/rxjs-interop";
 import {Store} from "@ngrx/store";
 import {HttpClient} from "@angular/common/http";
+import {LinkedinSvgComponent} from "../../../../ui/src/lib/linkedin-svg/linkedin-svg.component";
 
 @Component({
   selector: 'itd-home',
   standalone: true,
-  imports: [CommonModule, StandardPageLayoutComponent, CardComponent, TranslateModule, StandardSectionLayoutComponent, BulletListComponent, LanguageAndThemeAwareImageComponent, RouterLink, SingleColPageLayoutComponent, FormsModule, ReactiveFormsModule],
+  imports: [CommonModule, CardComponent, TranslateModule, StandardSectionLayoutComponent, BulletListComponent, LanguageAndThemeAwareImageComponent, RouterLink, SingleColPageLayoutComponent, FormsModule, ReactiveFormsModule, LinkedinSvgComponent],
   templateUrl: './home-page.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })

@@ -26,10 +26,6 @@ export class HeaderComponent {
   public showAboutUs = false;
   protected readonly Path = Path;
 
-  public openLinedIn(): void {
-    window.open('https://www.linkedin.com/in/yanicdobler/', '_blank');
-  }
-
   public toggleNavBar() {
     this.showMenu = !this.showMenu;
   }

@@ -12,8 +12,7 @@
                     <div class="flex lg:items-center space-x-4">
                         <ng-container [ngTemplateOutlet]="mainNavContent"></ng-container>
                         <div class="flex justify-around items-center">
-                            <itd-linkedin-svg class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer"
-                                              (click)="openLinedIn()"></itd-linkedin-svg>
+                            <itd-linkedin-svg></itd-linkedin-svg>
                             <itd-language-select></itd-language-select>
                             <itd-theme-select></itd-theme-select>
                         </div>
@@ -46,8 +45,7 @@
         <div class="space-y-1 px-2 pb-3 pt-2">
             <ng-container [ngTemplateOutlet]="mainNavContent"></ng-container>
             <div class="flex justify-around">
-                <itd-linkedin-svg class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer"
-                                  (click)="openLinedIn()"></itd-linkedin-svg>
+                <itd-linkedin-svg></itd-linkedin-svg>
                 <itd-language-select></itd-language-select>
                 <itd-theme-select></itd-theme-select>
             </div>
@@ -107,12 +105,12 @@
                         menu.references.happy-post
                     </a>
                 </li>
-<!--                <li class="p-3 lg:p-5">-->
-<!--                    <a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer"-->
-<!--                       [routerLink]="'/' + [Path.REFERENCES + '/' + Path.YACHT_PARTNER]" translate>-->
-<!--                        menu.references.yachtpartner-->
-<!--                    </a>-->
-<!--                </li>-->
+                <!--                <li class="p-3 lg:p-5">-->
+                <!--                    <a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer"-->
+                <!--                       [routerLink]="'/' + [Path.REFERENCES + '/' + Path.YACHT_PARTNER]" translate>-->
+                <!--                        menu.references.yachtpartner-->
+                <!--                    </a>-->
+                <!--                </li>-->
                 <li class="p-3 lg:p-5">
                     <a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer"
                        [routerLink]="'/' + [Path.REFERENCES + '/' + Path.HALMA]" translate>
@@ -143,7 +141,8 @@
                     </a>
                 </li>
                 <li class="p-3 lg:p-5">
-                    <a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer" [routerLink]="'/' + Path.FOUNDER"
+                    <a class="dark:hover:text-light-gold hover:text-itd-black cursor-pointer"
+                       [routerLink]="'/' + Path.FOUNDER"
                        translate>
                         menu.about-us.founder
                     </a>

@@ -154,65 +154,72 @@
     <itd-standard-section-layout [id]="Path.CONTACT" class="[&>section]:border-none">
         <h2 class="text-2xl text-center font-orbitron mb-8 text-gold" translate>contact.title</h2>
         <div class="flex flex-col lg:flex-row lg:items-center mx-4">
-            <!-- The form could benefit from some refactoring, however the initial investment is very high -->
-            <form class="flex-1 flex-grow" [formGroup]="form" (ngSubmit)="submit()">
-                <p class="mb-4 font-orbitron" translate>contact.intro</p>
-                <div *ngIf="form.controls.name as control" class="mb-5">
-                    <label for="name" class="block mb-1 text-itd-black dark:text-gold"
-                           translate>contact.form.name</label>
-                    <input type="text" id="name"
-                           [formControl]="control"
-                           class="bg-light-gold text-itd-black focus-visible:outline-0 block w-full p-2.5 dark:bg-light-gold dark:text-itd-black">
-                    <p *ngIf="control.touched && control.invalid" class="mt-2 text-red-600 dark:text-red-500"
-                       translate>
-                        contact.form.name.error
-                    </p>
+            <div class="flex-1 flex-grow">
+                <div class="flex items-center flex-col">
+                    <p class="mb-4 font-orbitron" translate>contact.intro</p>
+                    <itd-linkedin-svg [width]="56"></itd-linkedin-svg>
                 </div>
-                <div *ngIf="form.controls.email as control" class="mb-5">
-                    <label for="email" class="block mb-1 text-itd-black dark:text-gold"
-                           translate>contact.form.email</label>
-                    <input type="text" id="email"
-                           [formControl]="control"
-                           class="bg-light-gold text-itd-black focus-visible:outline-0 block w-full p-2.5 dark:bg-light-gold dark:text-itd-black"
-                           translate>
-                    <p *ngIf="control.touched && control.invalid" class="mt-2 text-red-600 dark:text-red-500"
-                       translate>
-                        contact.form.email.error
-                </div>
-                <div *ngIf="form.controls.phoneNumber as control" class="mb-5">
-                    <label for="phone-number" class="block mb-1 text-itd-black dark:text-gold" translate>contact.form.phone-number</label>
-                    <input type="text" id="phone-number"
-                           [formControl]="control"
-                           class="bg-light-gold text-itd-black focus-visible:outline-0 block w-full p-2.5 dark:bg-light-gold dark:text-itd-black">
-                </div>
-                <div *ngIf="form.controls.message as control" class="mb-5 relative">
-                    <img *ngIf="!messageSig() || messageSig()?.length === 0"
-                         src="assets/images/icons8-ball-point-pen.svg" class="absolute top-3 left-3 w-4">
-                    <textarea id="message" rows="4"
-                              [formControl]="control"
-                              class="block p-2.5 mt-2 w-full text-itd-black bg-light-gold focus-visible:outline-none"></textarea>
-                </div>
-                <div class="text-center lg:text-end">
-                    <button type="submit"
-                            class="text-2xl font-normal text-white dark:text-itd-black bg-gold hover:bg-light-gold rounded-full px-12 py-2 text-center mb-2 dark:bg-gold dark:hover:bg-light-gold"
-                            translate>
-                        contact.form.send
-                    </button>
-                </div>
+            </div>
 
-                <div [ngSwitch]="submitStateSig()" class="text-center mt-4">
-                    <div *ngSwitchCase="'working'">
-                        <span translate>contact.form.working</span>
-                        <img src="assets/images/dark-mode/logo-plain.svg" class="h-4 ml-3 animate-spin inline">
-                    </div>
-                    <div *ngSwitchCase="'done'" class="text-gold" translate>
-                        contact.form.done
-                    </div>
-                    <div *ngSwitchCase="'error'" translate>
-                        contact.form.error
-                    </div>
-                </div>
-            </form>
+            <!-- The form could benefit from some refactoring, however the initial investment is very high -->
+<!--            <form class="flex-1 flex-grow" [formGroup]="form" (ngSubmit)="submit()">-->
+<!--                <p class="mb-4 font-orbitron" translate>contact.intro</p>-->
+<!--                <div *ngIf="form.controls.name as control" class="mb-5">-->
+<!--                    <label for="name" class="block mb-1 text-itd-black dark:text-gold"-->
+<!--                           translate>contact.form.name</label>-->
+<!--                    <input type="text" id="name"-->
+<!--                           [formControl]="control"-->
+<!--                           class="bg-light-gold text-itd-black focus-visible:outline-0 block w-full p-2.5 dark:bg-light-gold dark:text-itd-black">-->
+<!--                    <p *ngIf="control.touched && control.invalid" class="mt-2 text-red-600 dark:text-red-500"-->
+<!--                       translate>-->
+<!--                        contact.form.name.error-->
+<!--                    </p>-->
+<!--                </div>-->
+<!--                <div *ngIf="form.controls.email as control" class="mb-5">-->
+<!--                    <label for="email" class="block mb-1 text-itd-black dark:text-gold"-->
+<!--                           translate>contact.form.email</label>-->
+<!--                    <input type="text" id="email"-->
+<!--                           [formControl]="control"-->
+<!--                           class="bg-light-gold text-itd-black focus-visible:outline-0 block w-full p-2.5 dark:bg-light-gold dark:text-itd-black"-->
+<!--                           translate>-->
+<!--                    <p *ngIf="control.touched && control.invalid" class="mt-2 text-red-600 dark:text-red-500"-->
+<!--                       translate>-->
+<!--                        contact.form.email.error-->
+<!--                </div>-->
+<!--                <div *ngIf="form.controls.phoneNumber as control" class="mb-5">-->
+<!--                    <label for="phone-number" class="block mb-1 text-itd-black dark:text-gold" translate>contact.form.phone-number</label>-->
+<!--                    <input type="text" id="phone-number"-->
+<!--                           [formControl]="control"-->
+<!--                           class="bg-light-gold text-itd-black focus-visible:outline-0 block w-full p-2.5 dark:bg-light-gold dark:text-itd-black">-->
+<!--                </div>-->
+<!--                <div *ngIf="form.controls.message as control" class="mb-5 relative">-->
+<!--                    <img *ngIf="!messageSig() || messageSig()?.length === 0"-->
+<!--                         src="assets/images/icons8-ball-point-pen.svg" class="absolute top-3 left-3 w-4">-->
+<!--                    <textarea id="message" rows="4"-->
+<!--                              [formControl]="control"-->
+<!--                              class="block p-2.5 mt-2 w-full text-itd-black bg-light-gold focus-visible:outline-none"></textarea>-->
+<!--                </div>-->
+<!--                <div class="text-center lg:text-end">-->
+<!--                    <button type="submit"-->
+<!--                            class="text-2xl font-normal text-white dark:text-itd-black bg-gold hover:bg-light-gold rounded-full px-12 py-2 text-center mb-2 dark:bg-gold dark:hover:bg-light-gold"-->
+<!--                            translate>-->
+<!--                        contact.form.send-->
+<!--                    </button>-->
+<!--                </div>-->
+
+<!--                <div [ngSwitch]="submitStateSig()" class="text-center mt-4">-->
+<!--                    <div *ngSwitchCase="'working'">-->
+<!--                        <span translate>contact.form.working</span>-->
+<!--                        <img src="assets/images/dark-mode/logo-plain.svg" class="h-4 ml-3 animate-spin inline">-->
+<!--                    </div>-->
+<!--                    <div *ngSwitchCase="'done'" class="text-gold" translate>-->
+<!--                        contact.form.done-->
+<!--                    </div>-->
+<!--                    <div *ngSwitchCase="'error'" translate>-->
+<!--                        contact.form.error-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </form>-->
             <div class="flex-1 flex-grow lg:ml-16 mt-8 lg:mt-0">
                 <h2 class="mt-2 font-orbitron text-2xl"><img
                         class="inline lg:block h-5 lg:h-12 align-baseline mr-1 lg:mb-1"
@@ -221,7 +228,7 @@
                 <p translate>contact.address.switzerland</p>
                 <p>
                     <span translate>contact.address.mobile</span>
-                    <span class="text-base" translate>+41 79 551 36 48</span>
+                    <span class="text-base" translate>+41 79 258 19 42</span>
                 </p>
                 <p class="mt-2" translate>contact.address.uruguay</p>
                 <p>
